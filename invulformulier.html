@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Wijnlijn — teksten bewerken</title>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=EB+Garamond&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold-deep:#C08F2E; --gold-pale:#F1DFA9; --cream:#FBF5E6;
+    --green-deep:#52573C; --ink:#2B2417; --white:#FFFDF7; --line:#DCD0AE;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'EB Garamond', serif; font-size:17px; padding:0 0 80px;}
+  header{background:var(--green-deep); color:var(--white); padding:26px 20px; text-align:center;}
+  header h1{font-family:'Antonio', sans-serif; margin:0 0 6px; font-size:1.9rem;}
+  header p{margin:0; font-family:'Antonio', sans-serif; font-size:0.85rem; color:#DCE3CE; max-width:560px; margin:0 auto;}
+  main{max-width:760px; margin:0 auto; padding:28px 20px;}
+  fieldset{border:1px solid var(--line); border-radius:6px; margin-bottom:26px; padding:20px 22px; background:var(--white);}
+  legend{font-family:'Antonio', sans-serif; font-weight:700; font-size:1.3rem; color:var(--green-deep); padding:0 8px;}
+  label{display:block; font-family:'Antonio', sans-serif; font-size:0.78rem; letter-spacing:0.03em; text-transform:uppercase; color:#8A7B4E; margin:16px 0 6px;}
+  label:first-of-type{margin-top:4px;}
+  input[type=text], textarea{
+    width:100%; font-family:'EB Garamond', serif; font-size:1rem; padding:10px 12px;
+    border:1px solid var(--line); border-radius:4px; background:#FFFDF9; color:var(--ink);
+  }
+  textarea{min-height:70px; resize:vertical;}
+  input:focus, textarea:focus{outline:2px solid var(--gold-deep); outline-offset:1px;}
+  .item-box{border:1px dashed var(--line); border-radius:6px; padding:14px 16px; margin-bottom:14px; position:relative; background:#FEFCF5;}
+  .item-box .row-title{font-family:'Antonio', sans-serif; font-size:0.75rem; color:#8A7B4E; margin-bottom:6px;}
+  .remove-btn{
+    position:absolute; top:10px; right:10px; background:none; border:none; color:#A34C3B;
+    font-family:'Antonio', sans-serif; font-size:0.75rem; cursor:pointer; text-decoration:underline;
+  }
+  .add-btn{
+    display:inline-block; margin-top:4px; background:var(--gold-pale); border:1px solid var(--gold-deep);
+    color:#6B4E14; font-family:'Antonio', sans-serif; font-size:0.82rem; padding:8px 16px; border-radius:4px; cursor:pointer;
+  }
+  .add-btn:hover{background:var(--gold-deep); color:#fff;}
+  .actions{
+    position:sticky; bottom:0; background:var(--cream); border-top:1px solid var(--line);
+    padding:16px 20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+  }
+  .btn-main{
+    font-family:'Antonio', sans-serif; font-weight:600; font-size:0.95rem; padding:13px 28px;
+    border-radius:4px; border:none; cursor:pointer;
+  }
+  .btn-download{background:var(--green-deep); color:#fff;}
+  .btn-copy{background:var(--white); color:var(--green-deep); border:1.5px solid var(--green-deep) !important;}
+  #status{font-family:'Antonio', sans-serif; font-size:0.85rem; text-align:center; margin-top:10px; color:var(--green-deep); min-height:1.2em;}
+  .hint{font-family:'Antonio', sans-serif; font-size:0.78rem; color:#8A7B4E; margin:-6px 0 12px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Teksten voor de website</h1>
+  <p>Vul aan of wijzig wat je wilt. Onderaan kun je het resultaat downloaden als <code>content.json</code> — dat bestand stuur je terug, zodat het op de site gezet kan worden.</p>
+</header>
+
+<main>
+  <div id="status">Bezig met laden van de huidige tekst\u2026</div>
+
+  <fieldset>
+    <legend>Naam &amp; contact</legend>
+    <label for="f-businessName">Bedrijfsnaam</label>
+    <input type="text" id="f-businessName">
+    <label for="f-tagline">Korte ondertitel</label>
+    <input type="text" id="f-tagline">
+    <label for="f-email">E-mailadres</label>
+    <input type="text" id="f-email">
+    <label for="f-phone">Telefoonnummer</label>
+    <input type="text" id="f-phone">
+    <label for="f-instagram">Instagram / Facebook (optioneel)</label>
+    <input type="text" id="f-instagram">
+  </fieldset>
+
+  <fieldset>
+    <legend>Homepage (bovenaan)</legend>
+    <label for="f-heroEyebrow">Kleine label boven de titel</label>
+    <input type="text" id="f-heroEyebrow">
+    <label for="f-heroTitle">Titel (eerste regel)</label>
+    <input type="text" id="f-heroTitle">
+    <label for="f-heroEm">Titel (tweede regel, uitgelicht)</label>
+    <input type="text" id="f-heroEm">
+    <label for="f-heroLead">Introductietekst</label>
+    <textarea id="f-heroLead"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Proeverijen</legend>
+    <label for="f-proevEyebrow">Klein label</label>
+    <input type="text" id="f-proevEyebrow">
+    <label for="f-proevHeading">Titel</label>
+    <input type="text" id="f-proevHeading">
+    <label for="f-proevIntro">Inleidende tekst</label>
+    <textarea id="f-proevIntro"></textarea>
+    <div class="hint">De kaartjes hieronder (bijv. "Aan huis", "Op locatie") — voeg toe of verwijder wat nodig is.</div>
+    <div id="proev-list"></div>
+    <button type="button" class="add-btn" onclick="addCard()">+ Kaartje toevoegen</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Training</legend>
+    <label for="f-trainEyebrow">Klein label</label>
+    <input type="text" id="f-trainEyebrow">
+    <label for="f-trainHeading">Titel</label>
+    <input type="text" id="f-trainHeading">
+    <label for="f-trainIntro1">Introductietekst (1e alinea)</label>
+    <textarea id="f-trainIntro1"></textarea>
+    <label for="f-trainIntro2">Introductietekst (2e alinea)</label>
+    <textarea id="f-trainIntro2"></textarea>
+    <div class="hint">Niveaus / trainingsvormen:</div>
+    <div id="track-list"></div>
+    <button type="button" class="add-btn" onclick="addTrack()">+ Niveau toevoegen</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Wijn &amp; Spijs</legend>
+    <label for="f-spijsEyebrow">Klein label</label>
+    <input type="text" id="f-spijsEyebrow">
+    <label for="f-spijsHeading">Titel</label>
+    <input type="text" id="f-spijsHeading">
+    <label for="f-spijsIntro">Inleidende tekst</label>
+    <textarea id="f-spijsIntro"></textarea>
+    <label for="f-spijsMenuTitle">Titel boven het voorbeeldmenu</label>
+    <input type="text" id="f-spijsMenuTitle">
+    <div class="hint">Voorbeeldcombinaties (gerecht + wijn):</div>
+    <div id="row-list"></div>
+    <button type="button" class="add-btn" onclick="addRow()">+ Combinatie toevoegen</button>
+    <label for="f-spijsNote">Zin onderaan het kaartje</label>
+    <input type="text" id="f-spijsNote">
+  </fieldset>
+
+  <fieldset>
+    <legend>Over jou</legend>
+    <label for="f-overQuote">Korte quote (1 zin, zonder aanhalingstekens)</label>
+    <input type="text" id="f-overQuote">
+    <label for="f-overText">Jouw verhaal</label>
+    <textarea id="f-overText" style="min-height:120px;"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reacties van gasten (optioneel)</legend>
+    <div class="hint">Laat leeg als je nog geen reacties hebt — dit blok verschijnt dan niet op de site.</div>
+    <div id="testi-list"></div>
+    <button type="button" class="add-btn" onclick="addTestimonial()">+ Reactie toevoegen</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Contact-sectie</legend>
+    <label for="f-contactIntro">Zin boven de contactgegevens</label>
+    <textarea id="f-contactIntro"></textarea>
+  </fieldset>
+</main>
+
+<div class="actions">
+  <button type="button" class="btn-main btn-download" onclick="downloadJson()">Download content.json</button>
+  <button type="button" class="btn-main btn-copy" onclick="copyJson()">Kopieer naar klembord</button>
+</div>
+
+<script>
+let data = null;
+
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (html !== undefined) e.innerHTML = html;
+  return e;
+}
+function setVal(id, val) { document.getElementById(id).value = val || ''; }
+function getVal(id) { return document.getElementById(id).value; }
+
+function renderCards() {
+  const wrap = document.getElementById('proev-list');
+  wrap.innerHTML = '';
+  data.proeverijen.cards.forEach((c, i) => {
+    const box = el('div', 'item-box');
+    box.appendChild(el('div', 'row-title', 'Kaartje ' + (i + 1)));
+    const btn = el('button', 'remove-btn', 'verwijderen');
+    btn.type = 'button';
+    btn.onclick = () => { data.proeverijen.cards.splice(i, 1); renderCards(); };
+    box.appendChild(btn);
+    box.appendChild(mkLabel('Titel'));
+    box.appendChild(mkInput(c.title, v => c.title = v));
+    box.appendChild(mkLabel('Tekst'));
+    box.appendChild(mkTextarea(c.text, v => c.text = v));
+    wrap.appendChild(box);
+  });
+}
+function addCard() {
+  const romans = ['I','II','III','IV','V','VI','VII'];
+  data.proeverijen.cards.push({ num: romans[data.proeverijen.cards.length] || '', title: 'Nieuwe optie', text: '' });
+  renderCards();
+}
+
+function renderTracks() {
+  const wrap = document.getElementById('track-list');
+  wrap.innerHTML = '';
+  data.training.tracks.forEach((t, i) => {
+    const box = el('div', 'item-box');
+    box.appendChild(el('div', 'row-title', 'Niveau ' + (i + 1)));
+    const btn = el('button', 'remove-btn', 'verwijderen');
+    btn.type = 'button';
+    btn.onclick = () => { data.training.tracks.splice(i, 1); renderTracks(); };
+    box.appendChild(btn);
+    box.appendChild(mkLabel('Titel'));
+    box.appendChild(mkInput(t.title, v => t.title = v));
+    box.appendChild(mkLabel('Tekst'));
+    box.appendChild(mkTextarea(t.text, v => t.text = v));
+    wrap.appendChild(box);
+  });
+}
+function addTrack() {
+  data.training.tracks.push({ title: 'Nieuw niveau', text: '' });
+  renderTracks();
+}
+
+function renderRows() {
+  const wrap = document.getElementById('row-list');
+  wrap.innerHTML = '';
+  data.spijs.rows.forEach((r, i) => {
+    const box = el('div', 'item-box');
+    box.appendChild(el('div', 'row-title', 'Combinatie ' + (i + 1)));
+    const btn = el('button', 'remove-btn', 'verwijderen');
+    btn.type = 'button';
+    btn.onclick = () => { data.spijs.rows.splice(i, 1); renderRows(); };
+    box.appendChild(btn);
+    box.appendChild(mkLabel('Gerecht'));
+    box.appendChild(mkInput(r.dish, v => r.dish = v));
+    box.appendChild(mkLabel('Wijn'));
+    box.appendChild(mkInput(r.pair, v => r.pair = v));
+    wrap.appendChild(box);
+  });
+}
+function addRow() {
+  data.spijs.rows.push({ dish: 'Gerecht', pair: 'Wijn' });
+  renderRows();
+}
+
+function renderTestimonials() {
+  const wrap = document.getElementById('testi-list');
+  wrap.innerHTML = '';
+  data.testimonials.forEach((t, i) => {
+    const box = el('div', 'item-box');
+    box.appendChild(el('div', 'row-title', 'Reactie ' + (i + 1)));
+    const btn = el('button', 'remove-btn', 'verwijderen');
+    btn.type = 'button';
+    btn.onclick = () => { data.testimonials.splice(i, 1); renderTestimonials(); };
+    box.appendChild(btn);
+    box.appendChild(mkLabel('Reactie'));
+    box.appendChild(mkTextarea(t.quote, v => t.quote = v));
+    box.appendChild(mkLabel('Naam'));
+    box.appendChild(mkInput(t.name, v => t.name = v));
+    wrap.appendChild(box);
+  });
+}
+function addTestimonial() {
+  data.testimonials.push({ quote: '', name: '' });
+  renderTestimonials();
+}
+
+function mkLabel(text) { return el('label', null, text); }
+function mkInput(val, onChange) {
+  const i = document.createElement('input');
+  i.type = 'text'; i.value = val || '';
+  i.addEventListener('input', () => onChange(i.value));
+  return i;
+}
+function mkTextarea(val, onChange) {
+  const t = document.createElement('textarea');
+  t.value = val || '';
+  t.addEventListener('input', () => onChange(t.value));
+  return t;
+}
+
+function fillSimpleFields() {
+  setVal('f-businessName', data.meta.businessName);
+  setVal('f-tagline', data.meta.tagline);
+  setVal('f-email', data.meta.email);
+  setVal('f-phone', data.meta.phone);
+  setVal('f-instagram', data.meta.instagram);
+
+  setVal('f-heroEyebrow', data.hero.eyebrow);
+  setVal('f-heroTitle', data.hero.titleLine1);
+  setVal('f-heroEm', data.hero.titleEm);
+  setVal('f-heroLead', data.hero.lead);
+
+  setVal('f-proevEyebrow', data.proeverijen.eyebrow);
+  setVal('f-proevHeading', data.proeverijen.heading);
+  setVal('f-proevIntro', data.proeverijen.intro);
+
+  setVal('f-trainEyebrow', data.training.eyebrow);
+  setVal('f-trainHeading', data.training.heading);
+  setVal('f-trainIntro1', data.training.intro1);
+  setVal('f-trainIntro2', data.training.intro2);
+
+  setVal('f-spijsEyebrow', data.spijs.eyebrow);
+  setVal('f-spijsHeading', data.spijs.heading);
+  setVal('f-spijsIntro', data.spijs.intro);
+  setVal('f-spijsMenuTitle', data.spijs.menuTitle);
+  setVal('f-spijsNote', data.spijs.note);
+
+  setVal('f-overQuote', data.over.quote);
+  setVal('f-overText', data.over.text);
+
+  setVal('f-contactIntro', data.contact.intro);
+}
+
+function collectSimpleFields() {
+  data.meta.businessName = getVal('f-businessName');
+  data.meta.tagline = getVal('f-tagline');
+  data.meta.email = getVal('f-email');
+  data.meta.phone = getVal('f-phone');
+  data.meta.instagram = getVal('f-instagram');
+
+  data.hero.eyebrow = getVal('f-heroEyebrow');
+  data.hero.titleLine1 = getVal('f-heroTitle');
+  data.hero.titleEm = getVal('f-heroEm');
+  data.hero.lead = getVal('f-heroLead');
+
+  data.proeverijen.eyebrow = getVal('f-proevEyebrow');
+  data.proeverijen.heading = getVal('f-proevHeading');
+  data.proeverijen.intro = getVal('f-proevIntro');
+
+  data.training.eyebrow = getVal('f-trainEyebrow');
+  data.training.heading = getVal('f-trainHeading');
+  data.training.intro1 = getVal('f-trainIntro1');
+  data.training.intro2 = getVal('f-trainIntro2');
+
+  data.spijs.eyebrow = getVal('f-spijsEyebrow');
+  data.spijs.heading = getVal('f-spijsHeading');
+  data.spijs.intro = getVal('f-spijsIntro');
+  data.spijs.menuTitle = getVal('f-spijsMenuTitle');
+  data.spijs.note = getVal('f-spijsNote');
+
+  data.over.quote = getVal('f-overQuote');
+  data.over.text = getVal('f-overText');
+
+  data.contact.intro = getVal('f-contactIntro');
+}
+
+async function init() {
+  try {
+    const res = await fetch('content.json', { cache: 'no-store' });
+    data = await res.json();
+  } catch (e) {
+    document.getElementById('status').textContent = 'Kon content.json niet vinden — er wordt met een lege vragenlijst gestart.';
+    data = {
+      meta: {}, hero: {}, proeverijen: { cards: [] }, training: { tracks: [] },
+      spijs: { rows: [] }, over: {}, testimonials: [], contact: {}
+    };
+  }
+  data.proeverijen = data.proeverijen || { cards: [] };
+  data.proeverijen.cards = data.proeverijen.cards || [];
+  data.training = data.training || { tracks: [] };
+  data.training.tracks = data.training.tracks || [];
+  data.spijs = data.spijs || { rows: [] };
+  data.spijs.rows = data.spijs.rows || [];
+  data.testimonials = data.testimonials || [];
+  data.meta = data.meta || {}; data.hero = data.hero || {};
+  data.over = data.over || {}; data.contact = data.contact || {};
+
+  fillSimpleFields();
+  renderCards();
+  renderTracks();
+  renderRows();
+  renderTestimonials();
+  document.getElementById('status').textContent = 'Huidige tekst geladen. Pas aan wat je wilt.';
+}
+
+function downloadJson() {
+  collectSimpleFields();
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'content.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  document.getElementById('status').textContent = 'Gedownload! Stuur dit content.json-bestand terug.';
+}
+
+async function copyJson() {
+  collectSimpleFields();
+  const text = JSON.stringify(data, null, 2);
+  try {
+    await navigator.clipboard.writeText(text);
+    document.getElementById('status').textContent = 'Gekopieerd naar het klembord!';
+  } catch (e) {
+    document.getElementById('status').textContent = 'Kopiëren lukte niet automatisch — gebruik de downloadknop.';
+  }
+}
+
+init();
+</script>
+
+</body>
+</html>

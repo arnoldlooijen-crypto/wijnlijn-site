@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Wijnlijn — Proeverijen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold-deep:#C08F2E; --gold-mid:#D9AE55; --gold-pale:#F1DFA9;
+  --cream:#FBF5E6; --green-deep:#52573C; --green-mid:#767856; --green-soft:#A8A883;
+  --rose:#D98C93; --rose-soft:#F0C3C7;
+  --ink:#2B2417; --white:#FFFDF7;
+  --font-display:'Antonio', sans-serif;
+  --font-body:'EB Garamond', serif;
+  --font-utility:'Antonio', sans-serif;
+  --max-w:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--font-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:var(--font-display); color:var(--green-deep); margin:0 0 0.4em 0; font-weight:600; letter-spacing:0; text-transform:none;}
+a{color:inherit;} img{max-width:100%; display:block;}
+.container{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+.eyebrow{font-family:var(--font-utility); text-transform:uppercase; letter-spacing:0.22em; font-size:0.72rem; font-weight:600; color:var(--gold-deep); margin-bottom:0.9em; display:inline-block;}
+:focus-visible{outline:3px solid var(--gold-deep); outline-offset:3px;}
+
+header{position:sticky; top:0; z-index:50; background:rgba(251,245,230,0.88); backdrop-filter:blur(8px); border-bottom:1px solid rgba(82,87,60,0.15);}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--max-w); margin:0 auto;}
+.wordmark{display:flex; align-items:center; gap:10px; text-decoration:none; font-family:var(--font-display); font-weight:700; font-size:1.4rem; color:var(--green-deep);}
+.seal{width:38px; height:38px; border-radius:50%; border:1.5px solid var(--gold-deep); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:0.95rem; color:var(--gold-deep); flex-shrink:0;}
+nav.links{display:flex; gap:32px; font-family:var(--font-utility); font-size:0.92rem;}
+nav.links a{text-decoration:none; color:var(--ink); position:relative; padding-bottom:4px;}
+nav.links a::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--gold-deep); transition:width 0.25s ease;}
+nav.links a:hover::after, nav.links a:focus-visible::after{width:100%;}
+nav.links a.active{color:var(--gold-deep);}
+nav.links a.active::after{width:100%;}
+.menu-btn{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+.menu-btn span{display:block; width:24px; height:2px; background:var(--green-deep); margin:5px 0;}
+@media (max-width:780px){
+  nav.links{position:fixed; inset:64px 0 auto 0; background:var(--cream); flex-direction:column; gap:0; padding:8px 28px 20px; border-bottom:1px solid rgba(82,87,60,0.15); transform:translateY(-120%); transition:transform 0.3s ease;}
+  nav.links.open{transform:translateY(0);}
+  nav.links a{padding:12px 0; border-bottom:1px solid rgba(82,87,60,0.08);}
+  .menu-btn{display:block;}
+}
+
+.hero{position:relative; overflow:hidden; padding:96px 0 80px; background:radial-gradient(ellipse at 80% -10%, var(--gold-pale) 0%, transparent 55%), radial-gradient(ellipse at -10% 110%, var(--green-soft) 0%, transparent 45%), var(--cream); text-align:center;}
+.hero::before{content:""; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:560px; height:360px; max-width:120vw; background:radial-gradient(ellipse, var(--rose) 0%, transparent 68%); opacity:0.4; filter:blur(30px); pointer-events:none;}
+.hero-grapes{position:absolute; top:-40px; right:-40px; width:280px; opacity:0.5; z-index:1;}
+.hero .container{position:relative; z-index:2;}
+.hero h1{font-size:clamp(2.6rem, 6vw, 4.4rem); line-height:1.05;}
+.hero h1 em{font-style:normal; color:var(--rose); font-weight:700;}
+.hero p.lead{max-width:560px; margin:18px auto 34px; font-size:1.2rem; color:#4A4230;}
+
+.page-header{position:relative; padding:56px 0 40px; text-align:center; background:var(--cream);}
+.page-header .container{position:relative; z-index:1;}
+.page-header h1{font-size:clamp(2.2rem, 5vw, 3.2rem);}
+.page-header p{max-width:560px; margin:14px auto 0; font-size:1.08rem; color:#4A4230;}
+
+.btn{display:inline-block; font-family:var(--font-utility); font-weight:600; text-decoration:none; letter-spacing:0.04em; font-size:0.92rem; padding:15px 34px; border-radius:2px; transition:transform 0.2s ease, box-shadow 0.2s ease;}
+.btn-primary{background:var(--green-deep); color:var(--white); box-shadow:0 6px 18px rgba(82,87,60,0.25);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(82,87,60,0.32);}
+.btn-ghost{background:transparent; color:var(--green-deep); border:1.5px solid var(--green-deep); margin-left:14px;}
+.btn-ghost:hover{background:var(--green-deep); color:var(--white);}
+
+.vine-divider{width:100%; height:34px; display:block;}
+.vine-divider path.stem{fill:none; stroke:var(--green-mid); stroke-width:1.4; stroke-linecap:round;}
+.vine-divider path.leaf{fill:var(--green-soft); opacity:0.8;}
+.vine-divider circle{fill:var(--gold-mid);}
+.vine-divider circle.rose{fill:var(--rose);}
+
+section{padding:76px 0;}
+.section-head{max-width:640px; margin:0 auto 48px; text-align:center;}
+.section-head h2{font-size:clamp(2rem, 4vw, 2.7rem);}
+.section-head p{color:#544A34; font-size:1.08rem;}
+.reveal{opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:26px;}
+@media (max-width:860px){.card-grid{grid-template-columns:1fr;}}
+.card{background:var(--white); border:1px solid rgba(82,87,60,0.14); padding:34px 28px; border-radius:3px; position:relative; transition:transform 0.25s ease, box-shadow 0.25s ease;}
+.card:hover{transform:translateY(-5px); box-shadow:0 16px 30px rgba(43,36,23,0.1), 0 6px 24px rgba(217,140,147,0.18);}
+.card .num{font-family:var(--font-display); font-style:normal; font-weight:700; font-size:2.1rem; color:var(--rose); display:block; margin-bottom:6px;}
+.card h3{font-size:1.4rem; margin-bottom:10px;}
+.card p{color:#544A34; font-size:0.98rem; margin:0 0 14px;}
+.card .more{font-family:var(--font-utility); font-size:0.82rem; font-weight:600; color:var(--green-deep); text-decoration:none; letter-spacing:0.03em;}
+.card .more:hover{color:var(--gold-deep);}
+
+.training-wrap{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start;}
+@media (max-width:860px){.training-wrap{grid-template-columns:1fr;}}
+.training-copy p{color:#544A34;}
+.training-tracks{display:flex; flex-direction:column; gap:18px;}
+.track{border-left:3px solid var(--gold-deep); padding:6px 0 6px 20px;}
+.track:nth-child(2){border-left-color:var(--rose);}
+.track h3{font-size:1.25rem; margin-bottom:6px; color:var(--green-deep);}
+.track p{margin:0; color:#544A34; font-size:0.96rem;}
+
+.menu-card{background:var(--white); border:1px solid rgba(192,143,46,0.35); border-top:3px solid var(--rose); max-width:720px; margin:0 auto; padding:44px 40px; box-shadow:0 18px 40px rgba(43,36,23,0.08);}
+.menu-card .menu-title{text-align:center; font-family:var(--font-utility); text-transform:uppercase; letter-spacing:0.24em; font-size:0.72rem; color:var(--gold-deep); margin-bottom:26px;}
+.menu-row{display:flex; align-items:baseline; gap:8px; margin-bottom:20px;}
+.menu-row .dish{font-family:var(--font-display); font-size:1.2rem; color:var(--ink); white-space:nowrap;}
+.menu-row .leader{flex:1; border-bottom:1px dotted rgba(82,87,60,0.4); position:relative; top:-4px;}
+.menu-row .pair{font-family:var(--font-utility); font-size:0.82rem; color:var(--green-mid); white-space:nowrap; text-align:right;}
+.menu-note{text-align:center; margin-top:22px; font-size:0.9rem; color:#7a7156; font-style:italic;}
+
+.over-wrap{max-width:680px; margin:0 auto; text-align:center; position:relative;}
+.over-wrap::before{content:""; position:absolute; top:-40px; left:50%; transform:translateX(-50%); width:380px; height:220px; background:radial-gradient(ellipse, var(--rose) 0%, transparent 70%); opacity:0.3; filter:blur(24px); pointer-events:none; z-index:0;}
+.over-wrap > *{position:relative; z-index:1;}
+.over-wrap blockquote{font-family:var(--font-display); font-style:normal; font-weight:600; font-size:1.6rem; color:var(--rose); margin:0 0 26px; line-height:1.4;}
+.over-wrap p{color:#544A34;}
+
+.testimonials{max-width:800px; margin:48px auto 0; display:grid; gap:22px;}
+.testimonials .t{background:var(--white); border:1px solid rgba(82,87,60,0.14); padding:24px 28px; border-radius:3px;}
+.testimonials .t p.quote{font-family:var(--font-display); font-style:italic; font-size:1.15rem; margin:0 0 8px;}
+.testimonials .t p.name{font-family:var(--font-utility); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-deep); margin:0;}
+
+.contact{background:var(--green-deep); color:var(--white); position:relative; overflow:hidden;}
+.contact .container{position:relative; z-index:1;}
+.contact .section-head h2{color:var(--white);}
+.contact .section-head p{color:#DCE3CE;}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:760px; margin:0 auto;}
+@media (max-width:700px){.contact-grid{grid-template-columns:1fr;}}
+.contact-item{border-top:1px solid rgba(255,255,255,0.25); padding-top:16px;}
+.contact-item .eyebrow{color:var(--gold-mid);}
+.contact-item a{text-decoration:none; font-family:var(--font-display); font-size:1.3rem;}
+.contact-item a:hover{color:var(--gold-mid);}
+
+footer{background:var(--ink); color:#CFC6AE; padding:32px 0; text-align:center; font-family:var(--font-utility); font-size:0.82rem; letter-spacing:0.03em;}
+footer a{text-decoration:none; color:#CFC6AE;}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark"><span class="seal">DW</span> <span id="nav-name">De Wijnlijn</span></a>
+    <nav class="links" id="navLinks">
+      <a href="proeverijen.html" class="active">Proeverijen</a>
+      <a href="training.html">Training</a>
+      <a href="wijn-spijs.html">Wijn & Spijs</a>
+      <a href="over-mij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow" id="proeverijen-eyebrow"></span>
+    <h1 id="proeverijen-heading"></h1>
+    <p id="proeverijen-intro"></p>
+  </div>
+</section>
+
+<svg class="vine-divider" viewBox="0 0 400 34" preserveAspectRatio="none" aria-hidden="true"><path class="stem" d="M0,17 C50,4 100,30 150,17 C200,4 250,30 300,17 C330,8 370,26 400,17"/><path class="leaf" d="M96,17 q9,-13 18,0 q-9,13 -18,0 Z"/><path class="leaf" d="M246,17 q9,-13 18,0 q-9,13 -18,0 Z"/><circle cx="150" cy="17" r="3"/><circle cx="300" cy="17" r="3" class="rose"/></svg>
+
+<section>
+  <div class="container">
+    <div class="card-grid" id="proeverijen-cards"></div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="contact.html" class="btn btn-primary">Boek een proeverij</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">&copy; <span id="year"></span> <span id="footer-name">De Wijnlijn</span></div>
+</footer>
+
+<script>
+window.FALLBACK_CONTENT = {
+  "meta": {
+    "businessName": "De Wijnlijn",
+    "tagline": "Persoonlijke wijnproeverijen & wijntraining",
+    "email": "info@dewijnlijn.nl",
+    "phone": "06 - XX XX XX XX",
+    "instagram": ""
+  },
+  "hero": {
+    "eyebrow": "Persoonlijke wijnervaringen",
+    "titleLine1": "Wijn proeven zoals",
+    "titleEm": "het hoort",
+    "lead": "Een goed glas wijn wordt pas echt goed met de juiste mensen erbij. Ik neem je mee door wit, rood en rosé — aan tafel, in gesprek, zonder opgeheven vingertje."
+  },
+  "proeverijen": {
+    "eyebrow": "Drie manieren om te proeven",
+    "heading": "Kies je plek",
+    "intro": "Elke proeverij draait om dezelfde ingrediënten: goede wijn, goede verhalen en de tijd om ze samen te ontdekken.",
+    "cards": [
+      { "num": "I", "title": "Aan huis", "text": "Ik kom naar jou toe met de wijnen, de glazen en de proefkaarten. Jij zorgt voor de tafel en het gezelschap — de rest regel ik." },
+      { "num": "II", "title": "Op locatie", "text": "Voor een bedrijfsuitje, verjaardag of vriendengroep proef ik met je mee op de plek die jij kiest — van tuin tot feestzaal." },
+      { "num": "III", "title": "Bij mij thuis", "text": "Een knusse huiskamerproeverij op een vaste, vertrouwde plek — fijn voor wie liever aanschuift dan zelf gastheer speelt." }
+    ]
+  },
+  "training": {
+    "eyebrow": "Van druif tot glas",
+    "heading": "Wijntraining",
+    "intro1": "Wijn wordt leuker naarmate je meer proeft — en beter begrijpt wát je proeft. In mijn trainingen leer je op een ontspannen manier ruiken, proeven en benoemen.",
+    "intro2": "Geschikt voor een klein gezelschap, een team-uitje, of gewoon jezelf: kies het niveau dat past.",
+    "tracks": [
+      { "title": "Basis", "text": "Voor wie net begint: de belangrijkste druivensoorten, hoe je proeft, en hoe je een wijn kiest die bij je smaak past." },
+      { "title": "Verdieping", "text": "Voor wie al wat weet: aroma's herkennen, blind proeven, en de wijnstreken die het verschil maken." },
+      { "title": "Op maat", "text": "Een training rond een thema naar keuze — een land, een druif, of een gelegenheid." }
+    ]
+  },
+  "spijs": {
+    "eyebrow": "Combinaties die kloppen",
+    "heading": "Wijn & Spijs",
+    "intro": "Een goed glas maakt een gerecht beter, en andersom. Ik stel combinaties samen bij één gerecht, een heel menu, of een seizoensbox.",
+    "menuTitle": "Voorbeeld · een avond in drie gangen",
+    "rows": [
+      { "dish": "Voorgerecht", "pair": "Frisse witte wijn" },
+      { "dish": "Hoofdgerecht", "pair": "Kruidige rode wijn" },
+      { "dish": "Nagerecht", "pair": "Zoete of mousserende wijn" }
+    ],
+    "note": "Elke combinatie wordt op maat gemaakt bij jouw menu."
+  },
+  "over": {
+    "quote": "Wijn is het lekkerst met een verhaal erbij.",
+    "text": "[Hier komt jouw eigen verhaal: hoe je bij wijn terechtkwam, wat je stijl van proeven is, en waarom je dit graag met anderen deelt.]"
+  },
+  "testimonials": [],
+  "contact": {
+    "intro": "Laat weten wat je zoekt — aantal personen, gewenste plek, en of het om een proeverij, training of wijn-spijsavond gaat."
+  }
+};
+
+</script>
+<script>
+// Voetjaar
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
+
+// Mobiel menu
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+}
+
+// Kleine helper om elementen met tekst/klasse te bouwen
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (html !== undefined) e.innerHTML = html;
+  return e;
+}
+
+// Haalt content.json op; valt terug op de ingebouwde tekst (fallback-content.js)
+// als dat niet lukt, bijvoorbeeld bij lokaal openen zonder server.
+async function loadSiteData() {
+  try {
+    const res = await fetch('content.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('content.json gaf status ' + res.status);
+    return await res.json();
+  } catch (e) {
+    console.warn('content.json kon niet via fetch geladen worden (normaal bij lokaal openen zonder server) — ingebouwde tekst wordt gebruikt.', e);
+    return window.FALLBACK_CONTENT;
+  }
+}
+
+// Zet de bedrijfsnaam op de plekken die op elke pagina voorkomen (nav + footer + titel)
+function applySiteMeta(data, titleSuffix) {
+  document.getElementById('nav-name').textContent = data.meta.businessName || 'De Wijnlijn';
+  document.getElementById('footer-name').textContent = data.meta.businessName || 'De Wijnlijn';
+  document.title = (data.meta.businessName || 'De Wijnlijn') + (titleSuffix ? ' — ' + titleSuffix : '');
+}
+
+// Fade-in van elementen met class "reveal" zodra ze in beeld komen
+function initReveal() {
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(node => io.observe(node));
+  } else {
+    document.querySelectorAll('.reveal').forEach(node => node.classList.add('in'));
+  }
+}
+
+</script>
+<script>
+loadSiteData().then(data => {
+  applySiteMeta(data, data.proeverijen.heading || 'Proeverijen');
+  document.getElementById('proeverijen-eyebrow').textContent = data.proeverijen.eyebrow || '';
+  document.getElementById('proeverijen-heading').textContent = data.proeverijen.heading || '';
+  document.getElementById('proeverijen-intro').textContent = data.proeverijen.intro || '';
+  const cardsWrap = document.getElementById('proeverijen-cards');
+  (data.proeverijen.cards || []).forEach(c => {
+    const card = el('div', 'card reveal');
+    card.appendChild(el('span', 'num', c.num || ''));
+    card.appendChild(el('h3', null, c.title || ''));
+    card.appendChild(el('p', null, c.text || ''));
+    cardsWrap.appendChild(card);
+  });
+  initReveal();
+});
+</script>
+
+</body>
+</html>

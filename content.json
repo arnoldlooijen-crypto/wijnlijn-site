@@ -1,86 +1,124 @@
 {
-    "meta": {
-          "businessName": "De Wijnlijn",
-          "tagline": "Persoonlijke wijnproeverijen & wijntraining",
-          "email": "info@dewijnlijn.nl",
-          "phone": "06 - XX XX XX XX",
-          "instagram": ""
-    },
-    "hero": {
-          "eyebrow": "Persoonlijke wijnervaringen",
-          "titleLine1": "Wijn proeven zoals",
-          "titleEm": "het hoort",
-          "lead": "Een goed glas wijn wordt pas echt goed met de juiste mensen erbij. Ik neem je mee door wit, rood en rosé — aan tafel, in gesprek, zonder opgeheven vingertje."
-    },
-    "proeverijen": {
-          "eyebrow": "Drie manieren om te proeven",
-          "heading": "Kies je plek",
-          "intro": "Elke proeverij draait om dezelfde ingrediënten: goede wijn, goede verhalen en de tijd om ze samen te ontdekken.",
-          "cards": [
-                  {
-                            "num": "I",
-                            "title": "Aan huis",
-                            "text": "Ik kom naar jou toe met de wijnen, de glazen en de proefkaarten. Jij zorgt voor de tafel en het gezelschap — de rest regel ik."
-                  },
-                  {
-                            "num": "II",
-                            "title": "Op locatie",
-                            "text": "Voor een bedrijfsuitje, verjaardag of vriendengroep proef ik met je mee op de plek die jij kiest — van tuin tot feestzaal."
-                  },
-                  {
-                            "num": "III",
-                            "title": "Bij mij thuis",
-                            "text": "Een knusse huiskamerproeverij op een vaste, vertrouwde plek — fijn voor wie liever aanschuift dan zelf gastheer speelt. Plek voor maximaal 10 personen."
-                  }
-          ]
-    },
-    "training": {
-          "eyebrow": "Van druif tot glas",
-          "heading": "Wijntraining",
-          "intro1": "Wijn wordt leuker naarmate je meer proeft — en beter begrijpt wát je proeft. In mijn trainingen leer je op een ontspannen manier ruiken, proeven en benoemen.",
-          "intro2": "Geschikt voor een klein gezelschap, een team-uitje, of gewoon jezelf: kies het niveau dat past.",
-          "tracks": [
-                  {
-                            "title": "Basis",
-                            "text": "Voor wie net begint: de belangrijkste druivensoorten, hoe je proeft, en hoe je een wijn kiest die bij je smaak past. Twee avonden, €115 incl. btw (excl. lesboek)."
-                  },
-                  {
-                            "title": "Verdieping",
-                            "text": "Voor wie al wat weet: aroma's herkennen, blind proeven, en de wijnstreken die het verschil maken. €295 incl. btw (excl. lesboek)."
-                  },
-                  {
-                            "title": "Op maat",
-                            "text": "Een training rond een thema naar keuze — een land, een druif, of een gelegenheid. €435 incl. btw (excl. lesboek)."
-                  }
-          ]
-    },
-    "spijs": {
-          "eyebrow": "Combinaties die kloppen",
-          "heading": "Wijn & Spijs",
-          "intro": "Een goed glas maakt een gerecht beter, en andersom. Ik stel combinaties samen bij één gerecht, een heel menu, of een seizoensbox.",
-          "menuTitle": "Voorbeeld · een avond in drie gangen",
-          "rows": [
-                  {
-                            "dish": "Voorgerecht",
-                            "pair": "Frisse witte wijn"
-                  },
-                  {
-                            "dish": "Hoofdgerecht",
-                            "pair": "Kruidige rode wijn"
-                  },
-                  {
-                            "dish": "Nagerecht",
-                            "pair": "Zoete of mousserende wijn"
-                  }
-          ],
-          "note": "Elke combinatie wordt op maat gemaakt bij jouw menu."
-    },
-    "over": {
-          "quote": "Wijn is het lekkerst met een verhaal erbij.",
-          "text": "[Hier komt jouw eigen verhaal: hoe je bij wijn terechtkwam, wat je stijl van proeven is, en waarom je dit graag met anderen deelt.]"
-    },
-    "testimonials": [],
-    "contact": {
-          "intro": "Laat weten wat je zoekt — aantal personen, gewenste plek, en of het om een proeverij, training of wijn-spijsavond gaat."
-    }
+      "meta": {
+              "businessName": "De Wijnlijn",
+              "tagline": "Wijnopleidingen, proeverijen en advies",
+              "email": "info@dewijnlijn.nl",
+              "phone": "06 - XX XX XX XX",
+              "capsule": "Mis en bouteille \u00e0 Barneveld \u00b7 Sinds MMXIX"
+      },
+      "hero": {
+              "eyebrow": "Wijnopleidingen \u00b7 Trainingen \u00b7 Proeverijen",
+              "title": "De Wijnlijn",
+              "subtitle": "Appellation d'Origine Contr\u00f4l\u00e9e",
+              "tagline": "Wijn leren kennen zoals je een etiket leest: van herkomst naar glas, van nieuwsgierigheid naar vakmanschap. Voor liefhebbers, horeca en teams \u2014 in kleine groepen aan \u00e9\u00e9n tafel.",
+              "ctaPrimary": "Boek een proeverij",
+              "ctaSecondary": "Bekijk de opleidingen",
+              "factLine": "Max. 12 pers. \u00b7 6 \u00e0 8 wijnen \u00b7 2,5 u. netto \u00b7 Product van Barneveld"
+      },
+      "cepages": [
+              {
+                        "eyebrow": "Vin de Table",
+                        "title": "Proeverij aan tafel",
+                        "text": "Een avond met zes wijnen bij jou thuis of op locatie. Geen jargon, wel een verhaal per fles \u2014 en aan het eind weet je wat je lekker vindt en waarom.",
+                        "fact": "Vanaf \u20ac45 p.p. \u00b7 2,5 uur",
+                        "link": "proeverijen.html"
+              },
+              {
+                        "eyebrow": "Appellation Contr\u00f4l\u00e9e",
+                        "title": "Opleiding & training",
+                        "text": "Meerdaagse cursussen in vier niveaus, van eerste kennismaking tot examentraining voor WSET en SDEN. Structuur, systematisch proeven, echte theorie.",
+                        "fact": "4 tot 10 avonden \u00b7 Niveau I\u2013IV",
+                        "link": "niveaus.html"
+              },
+              {
+                        "eyebrow": "Cuv\u00e9e sur Mesure",
+                        "title": "Wijn & spijs, zakelijk",
+                        "text": "Voor teams, restaurants en relatie-events: een proeverij of training op maat, afgestemd op de kaart, het menu of het niveau van je mensen.",
+                        "fact": "Op aanvraag \u00b7 6 tot 40 pers.",
+                        "link": "zakelijk.html"
+              }
+      ],
+      "proeverijen": {
+              "eyebrow": "Vin de Table",
+              "heading": "Proeverij aan tafel",
+              "intro": "Een avond met zes wijnen bij jou thuis of op locatie. Geen jargon, wel een verhaal per fles \u2014 en aan het eind weet je wat je lekker vindt en waarom.",
+              "factLine": "Vanaf \u20ac45 p.p. \u00b7 2,5 uur \u00b7 6 tot 8 wijnen \u00b7 max. 12 personen",
+              "cards": [
+                        { "num": "I", "title": "Aan huis", "text": "Ik kom naar jou toe met de wijnen, de glazen en de proefkaarten. Jij zorgt voor de tafel en het gezelschap \u2014 de rest regel ik." },
+                        { "num": "II", "title": "Op locatie", "text": "Voor een bedrijfsuitje, verjaardag of vriendengroep proef ik met je mee op de plek die jij kiest \u2014 van tuin tot feestzaal." },
+                        { "num": "III", "title": "Bij mij thuis", "text": "Een knusse huiskamerproeverij op een vaste, vertrouwde plek \u2014 fijn voor wie liever aanschuift dan zelf gastheer speelt. Plek voor maximaal 10 personen." }
+              ]
+      },
+      "niveaus": {
+              "eyebrow": "Appellation Contr\u00f4l\u00e9e",
+              "heading": "Opleiding & training",
+              "intro": "Hoe strikter de herkomst, hoe nauwer de regels \u2014 en hoe meer je erin ziet. Zo werkt onze opbouw ook: elk niveau begrenst het gebied en verdiept het detail.",
+              "items": [
+                        {
+                                    "num": "I",
+                                    "appellation": "Vin de Table",
+                                    "title": "Kennismaking",
+                                    "text": "Losse proeverijen en workshops. Geen voorkennis, geen huiswerk \u2014 kijken, ruiken, benoemen."
+                        },
+                        {
+                                    "num": "II",
+                                    "appellation": "Appellation R\u00e9gionale",
+                                    "title": "Fundament",
+                                    "text": "Meerdaagse basiscursussen. Druiven, streken, vinificatie en een proefmethode die je de rest van je leven gebruikt."
+                        },
+                        {
+                                    "num": "III",
+                                    "appellation": "Appellation Communale",
+                                    "title": "Verdieping",
+                                    "text": "\u00c9\u00e9n land, \u00e9\u00e9n streek, \u00e9\u00e9n techniek per avond. Blind proeven, verticale reeksen, gesprek op niveau."
+                        },
+                        {
+                                    "num": "IV",
+                                    "appellation": "Grand Cru Class\u00e9",
+                                    "title": "Examen",
+                                    "text": "Examentraining WSET Level 2 en SDEN Vinoloog. Proefexamens, tastingnotes op norm, individuele feedback.",
+                                    "modules": [
+                                                  { "name": "SDEN Vinoloog 1", "detail": "2 avonden", "price": "\u20ac115 incl. btw (excl. lesboek)" },
+                                                  { "name": "SDEN Vinoloog 2", "detail": "", "price": "\u20ac295 incl. btw (excl. lesboek)" },
+                                                  { "name": "SDEN Vinoloog 3", "detail": "", "price": "\u20ac435 incl. btw (excl. lesboek)" }
+                                    ]
+                        }
+              ],
+              "linkText": "Alle opleidingen per niveau"
+      },
+      "zakelijk": {
+              "eyebrow": "Cuv\u00e9e sur Mesure",
+              "heading": "Voor teams en horeca",
+              "text": "Een bedrijfsproeverij die geen verplichte borrel is, of een training waarmee je vloer de kaart eindelijk kan verkopen. Ik kom langs, we bepalen het doel, ik neem de flessen mee.",
+              "tags": ["Teamuitje", "Relatie-event", "Personeelstraining", "Wijnkaart-advies"],
+              "cta": "Vraag een voorstel aan",
+              "spijs": {
+                        "heading": "Wijn & spijs",
+                        "intro": "Een goed glas maakt een gerecht beter, en andersom. Ik stel combinaties samen bij \u00e9\u00e9n gerecht, een heel menu, of een seizoensbox \u2014 ook voor horeca en op de kaart.",
+                        "menuTitle": "Voorbeeld \u00b7 een avond in drie gangen",
+                        "rows": [
+                                    { "dish": "Voorgerecht", "pair": "Frisse witte wijn" },
+                                    { "dish": "Hoofdgerecht", "pair": "Kruidige rode wijn" },
+                                    { "dish": "Nagerecht", "pair": "Zoete of mousserende wijn" }
+                        ],
+                        "note": "Elke combinatie wordt op maat gemaakt bij jouw menu of kaart.",
+                        "fact": "Op aanvraag \u00b7 6 tot 40 personen"
+              }
+      },
+      "over": {
+              "eyebrow": "Vigneron",
+              "heading": "Over mij",
+              "paragraphs": [
+                        "Ik geef wijnles zoals ik zelf had willen leren: aan tafel, met de fles ernaast en zonder omhaal. Twaalf jaar restaurantvloer, een wijnkaart die ik zelf samenstelde, en daarna de opleidingen die het onderbouwden.",
+                        "Groepen blijven klein, zodat er ruimte is om te twijfelen. Elke cursus eindigt met hetzelfde doel: dat je een onbekend etiket oppakt en al v\u00f3\u00f3r de eerste slok weet wat je ongeveer kunt verwachten."
+              ],
+              "credentials": "WSET Level 3 \u00b7 SDEN Vinoloog \u00b7 Wijndocent sinds 2019"
+      },
+      "testimonials": [],
+      "contact": {
+              "eyebrow": "Contre-\u00c9tiquette",
+              "heading": "Boeken of vragen",
+              "intro": "Vertel kort wat je zoekt, met wie en ongeveer wanneer. Je krijgt binnen twee werkdagen een voorstel met wijnen erbij.",
+              "werkgebied": "Barneveld en omstreken"
+      }
 }

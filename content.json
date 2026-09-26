@@ -1,124 +1,209 @@
 {
-      "meta": {
-              "businessName": "De Wijnlijn",
-              "tagline": "Wijnopleidingen, proeverijen en advies",
-              "email": "info@dewijnlijn.nl",
-              "phone": "06 - XX XX XX XX",
-              "capsule": "Mis en bouteille \u00e0 Barneveld \u00b7 Sinds MMXIX"
-      },
-      "hero": {
-              "eyebrow": "Wijnopleidingen \u00b7 Trainingen \u00b7 Proeverijen",
-              "title": "De Wijnlijn",
-              "subtitle": "Appellation d'Origine Contr\u00f4l\u00e9e",
-              "tagline": "Wijn leren kennen zoals je een etiket leest: van herkomst naar glas, van nieuwsgierigheid naar vakmanschap. Voor liefhebbers, horeca en teams \u2014 in kleine groepen aan \u00e9\u00e9n tafel.",
-              "ctaPrimary": "Boek een proeverij",
-              "ctaSecondary": "Bekijk de opleidingen",
-              "factLine": "Max. 12 pers. \u00b7 6 \u00e0 8 wijnen \u00b7 2,5 u. netto \u00b7 Product van Barneveld"
-      },
-      "cepages": [
-              {
-                        "eyebrow": "Vin de Table",
-                        "title": "Proeverij aan tafel",
-                        "text": "Een avond met zes wijnen bij jou thuis of op locatie. Geen jargon, wel een verhaal per fles \u2014 en aan het eind weet je wat je lekker vindt en waarom.",
-                        "fact": "Vanaf \u20ac45 p.p. \u00b7 2,5 uur",
-                        "link": "proeverijen.html"
-              },
-              {
-                        "eyebrow": "Appellation Contr\u00f4l\u00e9e",
-                        "title": "Opleiding & training",
-                        "text": "Meerdaagse cursussen in vier niveaus, van eerste kennismaking tot examentraining voor WSET en SDEN. Structuur, systematisch proeven, echte theorie.",
-                        "fact": "4 tot 10 avonden \u00b7 Niveau I\u2013IV",
-                        "link": "niveaus.html"
-              },
-              {
-                        "eyebrow": "Cuv\u00e9e sur Mesure",
-                        "title": "Wijn & spijs, zakelijk",
-                        "text": "Voor teams, restaurants en relatie-events: een proeverij of training op maat, afgestemd op de kaart, het menu of het niveau van je mensen.",
-                        "fact": "Op aanvraag \u00b7 6 tot 40 pers.",
-                        "link": "zakelijk.html"
-              }
-      ],
-      "proeverijen": {
-              "eyebrow": "Vin de Table",
-              "heading": "Proeverij aan tafel",
-              "intro": "Een avond met zes wijnen bij jou thuis of op locatie. Geen jargon, wel een verhaal per fles \u2014 en aan het eind weet je wat je lekker vindt en waarom.",
-              "factLine": "Vanaf \u20ac45 p.p. \u00b7 2,5 uur \u00b7 6 tot 8 wijnen \u00b7 max. 12 personen",
-              "cards": [
-                        { "num": "I", "title": "Aan huis", "text": "Ik kom naar jou toe met de wijnen, de glazen en de proefkaarten. Jij zorgt voor de tafel en het gezelschap \u2014 de rest regel ik." },
-                        { "num": "II", "title": "Op locatie", "text": "Voor een bedrijfsuitje, verjaardag of vriendengroep proef ik met je mee op de plek die jij kiest \u2014 van tuin tot feestzaal." },
-                        { "num": "III", "title": "Bij mij thuis", "text": "Een knusse huiskamerproeverij op een vaste, vertrouwde plek \u2014 fijn voor wie liever aanschuift dan zelf gastheer speelt. Plek voor maximaal 10 personen." }
-              ]
-      },
-      "niveaus": {
-              "eyebrow": "Appellation Contr\u00f4l\u00e9e",
-              "heading": "Opleiding & training",
-              "intro": "Hoe strikter de herkomst, hoe nauwer de regels \u2014 en hoe meer je erin ziet. Zo werkt onze opbouw ook: elk niveau begrenst het gebied en verdiept het detail.",
-              "items": [
-                        {
-                                    "num": "I",
-                                    "appellation": "Vin de Table",
-                                    "title": "Kennismaking",
-                                    "text": "Losse proeverijen en workshops. Geen voorkennis, geen huiswerk \u2014 kijken, ruiken, benoemen."
-                        },
-                        {
-                                    "num": "II",
-                                    "appellation": "Appellation R\u00e9gionale",
-                                    "title": "Fundament",
-                                    "text": "Meerdaagse basiscursussen. Druiven, streken, vinificatie en een proefmethode die je de rest van je leven gebruikt."
-                        },
-                        {
-                                    "num": "III",
-                                    "appellation": "Appellation Communale",
-                                    "title": "Verdieping",
-                                    "text": "\u00c9\u00e9n land, \u00e9\u00e9n streek, \u00e9\u00e9n techniek per avond. Blind proeven, verticale reeksen, gesprek op niveau."
-                        },
-                        {
-                                    "num": "IV",
-                                    "appellation": "Grand Cru Class\u00e9",
-                                    "title": "Examen",
-                                    "text": "Examentraining WSET Level 2 en SDEN Vinoloog. Proefexamens, tastingnotes op norm, individuele feedback.",
-                                    "modules": [
-                                                  { "name": "SDEN Vinoloog 1", "detail": "2 avonden", "price": "\u20ac115 incl. btw (excl. lesboek)" },
-                                                  { "name": "SDEN Vinoloog 2", "detail": "", "price": "\u20ac295 incl. btw (excl. lesboek)" },
-                                                  { "name": "SDEN Vinoloog 3", "detail": "", "price": "\u20ac435 incl. btw (excl. lesboek)" }
-                                    ]
-                        }
-              ],
-              "linkText": "Alle opleidingen per niveau"
-      },
-      "zakelijk": {
-              "eyebrow": "Cuv\u00e9e sur Mesure",
-              "heading": "Voor teams en horeca",
-              "text": "Een bedrijfsproeverij die geen verplichte borrel is, of een training waarmee je vloer de kaart eindelijk kan verkopen. Ik kom langs, we bepalen het doel, ik neem de flessen mee.",
-              "tags": ["Teamuitje", "Relatie-event", "Personeelstraining", "Wijnkaart-advies"],
-              "cta": "Vraag een voorstel aan",
-              "spijs": {
-                        "heading": "Wijn & spijs",
-                        "intro": "Een goed glas maakt een gerecht beter, en andersom. Ik stel combinaties samen bij \u00e9\u00e9n gerecht, een heel menu, of een seizoensbox \u2014 ook voor horeca en op de kaart.",
-                        "menuTitle": "Voorbeeld \u00b7 een avond in drie gangen",
-                        "rows": [
-                                    { "dish": "Voorgerecht", "pair": "Frisse witte wijn" },
-                                    { "dish": "Hoofdgerecht", "pair": "Kruidige rode wijn" },
-                                    { "dish": "Nagerecht", "pair": "Zoete of mousserende wijn" }
-                        ],
-                        "note": "Elke combinatie wordt op maat gemaakt bij jouw menu of kaart.",
-                        "fact": "Op aanvraag \u00b7 6 tot 40 personen"
-              }
-      },
-      "over": {
-              "eyebrow": "Vigneron",
-              "heading": "Over mij",
-              "paragraphs": [
-                        "Ik geef wijnles zoals ik zelf had willen leren: aan tafel, met de fles ernaast en zonder omhaal. Twaalf jaar restaurantvloer, een wijnkaart die ik zelf samenstelde, en daarna de opleidingen die het onderbouwden.",
-                        "Groepen blijven klein, zodat er ruimte is om te twijfelen. Elke cursus eindigt met hetzelfde doel: dat je een onbekend etiket oppakt en al v\u00f3\u00f3r de eerste slok weet wat je ongeveer kunt verwachten."
-              ],
-              "credentials": "WSET Level 3 \u00b7 SDEN Vinoloog \u00b7 Wijndocent sinds 2019"
-      },
-      "testimonials": [],
-      "contact": {
-              "eyebrow": "Contre-\u00c9tiquette",
-              "heading": "Boeken of vragen",
-              "intro": "Vertel kort wat je zoekt, met wie en ongeveer wanneer. Je krijgt binnen twee werkdagen een voorstel met wijnen erbij.",
-              "werkgebied": "Barneveld en omstreken"
-      }
+        "meta": {
+                  "businessName": "De Wijnlijn",
+                  "tagline": "De route naar het perfecte glas wijn",
+                  "email": "info@dewijnlijn.nl",
+                  "phone": "06 - XX XX XX XX"
+        },
+        "home": {
+                  "tagline": "De route naar het perfecte glas wijn.",
+                  "lead": [
+                              "De wijnwereld is een complexe wereld. Bij De Wijnlijn draait het om ontdekken, proeven en begrijpen, op een manier die toegankelijk, speels en vooral leuk blijft.",
+                              "Of je nu meer wilt leren over wijn, samen een proeverij wilt beleven of professioneel advies zoekt voor jouw horecazaak: De Wijnlijn helpt je graag verder.",
+                              "Geen stoffige verhalen of moeilijke termen om indruk te maken, maar duidelijke uitleg, goede wijnen en vooral veel aandacht voor wat jij lekker vindt.",
+                              "Van een eerste kennismaking met wijn tot meer verdieping in druiven, gebieden en smaken: De Wijnlijn helpt je jouw eigen smaak beter te leren kennen."
+                  ],
+                  "cta1": "Bekijk de proeverijen",
+                  "cta2": "Neem contact op",
+                  "pillars": [
+                              {
+                                            "title": "Proeverijen",
+                                            "text": "Ontdek wat er in je glas zit. Bij jou thuis, op locatie of tijdens een masterclass.",
+                                            "link": "proeverijen.html"
+                              },
+                              {
+                                            "title": "Wijnopleidingen",
+                                            "text": "Van eerste kennismaking tot serieuze verdieping: de SDEN-cursussen van De Wijnlijn.",
+                                            "link": "training.html"
+                              },
+                              {
+                                            "title": "Zakelijk",
+                                            "text": "Bedrijfsproeverijen, events en wijnadvies voor horeca. Wijn die werkt voor jouw bedrijf.",
+                                            "link": "wijn-spijs.html"
+                              }
+                  ]
+        },
+        "proeverijen": {
+                  "eyebrow": "Proeverijen",
+                  "heading": "Ontdek wat er in je glas zit",
+                  "intro": [
+                              "Wijn hoeft niet ingewikkeld te zijn. Geen eindeloze verhalen over moeilijke gebieden of termen waar je nog nooit van hebt gehoord, maar gewoon proeven, ontdekken en begrijpen.",
+                              "Tijdens een proeverij van De Wijnlijn nemen we je op een ontspannen manier mee in de wereld van wijn. Waarom proef je fruit in de ene wijn en juist kruiden in de andere? Wat doet een druivenras met de smaak? En waarom vind jij die ene wijn fantastisch en je buurman misschien helemaal niet?",
+                              "Je hoeft vooraf niets van wijn te weten. Nieuwsgierig zijn is genoeg."
+                  ],
+                  "sections": [
+                              {
+                                            "title": "Proeverij bij jou thuis",
+                                            "text": [
+                                                            "Je hoeft de deur niet uit voor een goede wijnproeverij. De Wijnlijn komt gewoon naar je toe.",
+                                                            "Samen proeven we verschillende wijnen en ontdek je onderweg steeds iets meer over druiven, gebieden, smaken en wijn maken. Geen hoorcollege aan de keukentafel, maar een gezellige avond waarin proeven en plezier vooropstaan.",
+                                                            "Leuk voor een verjaardag, vriendinnenavond, familiefeest of gewoon omdat je zin hebt om samen iets nieuws te ontdekken.",
+                                                            "Ook voor kleine zakelijke gezelschappen kan een proeverij op locatie worden samengesteld."
+                                            ],
+                                            "fact": "Diverse thema's mogelijk, kosten vanaf €25 p.p. op basis van 8 personen. Neem vrijblijvend contact op voor meer informatie.",
+                                            "closing": "Jouw avond, jouw gezelschap en een proeverij die daarbij past."
+                              },
+                              {
+                                            "title": "Op locatie & catering",
+                                            "text": [
+                                                            "Een borrel, diner, feest of evenement nét iets meer geven?",
+                                                            "De Wijnlijn kan worden ingezet op locatie voor een complete wijnproeverij, maar ook als onderdeel van een groter evenement of cateringopdracht. Van het schenken en toelichten van de wijnen tot een interactief proefmoment voor de gasten.",
+                                                            "Het programma stemmen we af op de gelegenheid. Toegankelijk en gezellig waar het kan, met meer verdieping waar daar behoefte aan is.",
+                                                            "Zo wordt wijn geen bijzaak op het evenement, maar onderdeel van de beleving."
+                                            ]
+                              },
+                              {
+                                            "title": "Masterclass bij De Wijnlijn",
+                                            "text": [
+                                                            "Een keer écht de diepte in?",
+                                                            "Tijdens een van de masterclasses van De Wijnlijn staat iedere keer een ander onderwerp centraal. Denk aan Champagne, Italië, bijzondere druivenrassen, wijn & spijs of diverse Pinot Noir's.",
+                                                            "We zetten diverse wijnen naast elkaar en gaan samen op zoek naar de verschillen. Niet alleen luisteren, maar vooral ruiken, proeven, vergelijken en ontdekken.",
+                                                            "Ideaal voor wijnliefhebbers die al wat meer weten én voor nieuwsgierige beginners die zich graag een avond onderdompelen in één onderwerp.",
+                                                            "Geen stoffige wijnles, wel een avond waarna je anders naar je volgende glas kijkt."
+                                            ]
+                              }
+                  ]
+        },
+        "opleidingen": {
+                  "eyebrow": "Wijnopleidingen",
+                  "heading": "Meer weten over wijn? Begin gewoon met proeven.",
+                  "intro": [
+                              "Wijn kan je zo ingewikkeld maken als je zelf wilt. Bij De Wijnlijn doen we dat liever niet.",
+                              "Tijdens onze SDEN-cursussen leer je stap voor stap begrijpen wat er in je glas gebeurt. Natuurlijk hoort daar theorie bij, maar wijn leer je uiteindelijk vooral door veel te ruiken, te vergelijken en te proeven.",
+                              "De opleidingen zijn geschikt voor enthousiaste wijnliefhebbers én voor mensen die beroepsmatig met wijn werken. Je hoeft dus echt geen wijnkenner te zijn om te beginnen.",
+                              "Welke route je kiest, bepaal je zelf."
+                  ],
+                  "courses": [
+                              {
+                                            "code": "SDEN 1",
+                                            "name": "Wijnvignet",
+                                            "subtitle": "De perfecte eerste stap in wijn",
+                                            "text": [
+                                                            "Vind je wijn leuk, maar heb je eigenlijk geen idee waarom je de ene wijn wel lekker vindt en de andere niet? Dan is SDEN 1 een mooie plek om te beginnen.",
+                                                            "Tijdens twee avonden maak je op een toegankelijke manier kennis met wijn. We kijken naar hoe wijn wordt gemaakt, bekende druivenrassen, smaken en aroma's en natuurlijk naar hoe je een wijn eigenlijk proeft.",
+                                                            "Je leert niet om moeilijke proefnotities uit je hoofd te kennen, maar juist om beter te herkennen wat jij ruikt en proeft.",
+                                                            "Na deze cursus kijk je gegarandeerd anders naar het wijnschap."
+                                            ],
+                                            "duration": "2 avonden",
+                                            "dates": "13 & 20 januari 2027",
+                                            "price": "€115 per persoon",
+                                            "priceNote": "Exclusief lesboek t.w.v. €9",
+                                            "audience": "Voor iedereen die nieuwsgierig is naar wijn. Voorkennis is niet nodig."
+                              },
+                              {
+                                            "code": "SDEN 2",
+                                            "name": "Wijnoorkonde",
+                                            "subtitle": "Van wijn drinken naar wijn begrijpen",
+                                            "text": [
+                                                            "We gaan een stap verder.",
+                                                            "Tijdens SDEN 2 reis je in vijf avonden langs de belangrijkste wijnlanden, gebieden en druivenrassen. Je ontdekt waarom een Sauvignon Blanc uit Frankrijk anders smaakt dan eentje uit Nieuw-Zeeland en waarom klimaat, bodem en de wijnmaker zoveel invloed hebben op wat uiteindelijk in je glas terechtkomt.",
+                                                            "Naast theorie wordt er natuurlijk volop geproefd. Je leert wijnen vergelijken, smaken herkennen, etiketten beter begrijpen en makkelijker een wijn kiezen.",
+                                                            "Ook wijn & spijs komt aan bod: want waarom werkt de ene combinatie fantastisch en valt de andere compleet uit elkaar?",
+                                                            "SDEN 2 is geschikt voor wijnliefhebbers die meer verdieping zoeken, maar ook voor mensen die in horeca, catering of wijnverkoop werken."
+                                            ],
+                                            "duration": "5 avonden",
+                                            "dates": "2 & 16 februari, 2, 16 & 30 maart 2027",
+                                            "price": "€295 per persoon",
+                                            "priceNote": "Exclusief lesboek t.w.v. €44",
+                                            "audience": "Voor enthousiaste wijnliefhebbers en professionals die een stevige basis in wijnkennis willen opbouwen."
+                              },
+                              {
+                                            "code": "SDEN 3",
+                                            "name": "Wijnbrevet",
+                                            "subtitle": "Klaar om écht de wijnwereld in te duiken?",
+                                            "text": [
+                                                            "Bij SDEN 3 wordt het serieuzer. Maar zeker niet stoffiger.",
+                                                            "Tijdens acht avonden duiken we verder in druivenrassen, wijnbouw, wijnbereiding en de belangrijkste wijngebieden van de wereld. Je leert steeds analytischer proeven en ontdekt hoe klimaat, herkomst en vinificatie terugkomen in het glas.",
+                                                            "We gaan uitgebreider in op verschillende wijnstijlen, mousserende en versterkte wijnen, wijnwetgeving, bewaren en serveren en natuurlijk wijn & spijs.",
+                                                            "En misschien wel het leukste: hoe meer je leert, hoe meer je tijdens het proeven gaat herkennen.",
+                                                            "SDEN 3 is interessant voor fanatieke wijnliefhebbers, maar ook voor professionals die wijnkennis in hun werk willen gebruiken."
+                                            ],
+                                            "duration": "8 avonden",
+                                            "dates": "1, 8, 15, 22 & 29 april, 4 & 13 mei 2027",
+                                            "price": "€435 per persoon",
+                                            "priceNote": "Exclusief lesboek t.w.v. €49,50",
+                                            "audience": "Voor wie al een goede basis heeft en zich verder wil verdiepen in de wereld van wijn."
+                              }
+                  ],
+                  "pickerHeading": "Welke opleiding past bij jou?",
+                  "picker": [
+                              { "level": "SDEN 1", "text": "Ik vind wijn leuk en wil eindelijk eens begrijpen wat ik proef." },
+                              { "level": "SDEN 2", "text": "Ik weet al iets van wijn en wil druiven, gebieden en smaken beter leren herkennen." },
+                              { "level": "SDEN 3", "text": "Ik wil serieus de diepte in en mijn wijnkennis naar een hoger niveau brengen." }
+                  ],
+                  "closing": [
+                              "Welke route je ook kiest: bij De Wijnlijn draait het niet om zoveel mogelijk moeilijke termen kennen.",
+                              "Het draait om proeven, begrijpen en vooral meer genieten van wijn."
+                  ]
+        },
+        "zakelijk": {
+                  "eyebrow": "Zakelijk",
+                  "heading": "Wijn die werkt voor jouw bedrijf",
+                  "intro": [
+                              "Wijn kan iets toevoegen aan een borrel, diner of evenement. Maar dan moet het wel passen bij het moment, het gerecht én de gasten.",
+                              "De Wijnlijn helpt bedrijven om wijn toegankelijk te maken. Van een ontspannen teamproeverij tot ondersteuning tijdens een evenement of praktisch wijnadvies voor de horeca.",
+                              "Altijd zonder onnodig ingewikkeld gedoe."
+                  ],
+                  "sections": [
+                              {
+                                            "title": "Bedrijfsproeverijen",
+                                            "text": [
+                                                            "Een keer iets anders dan de standaard bedrijfsborrel?",
+                                                            "Tijdens een bedrijfsproeverij draait het om samen proeven, ontdekken en vooral een leuke avond hebben. We maken wijn begrijpelijk en zorgen ervoor dat iedereen kan aanhaken, van degene die standaard 'een droge witte' bestelt tot de fanatieke wijnliefhebber.",
+                                                            "De inhoud kan worden afgestemd op jullie gezelschap of thema. Denk bijvoorbeeld aan blindproeven, wijn & spijs, een bepaald wijnland of een gezellige wijnquiz.",
+                                                            "Geschikt voor onder andere teamuitjes, klantavonden, relatie-events en bedrijfsfeesten."
+                                            ]
+                              },
+                              {
+                                            "title": "Events & catering",
+                                            "text": [
+                                                            "Ook tijdens een diner, borrel of evenement kan De Wijnlijn worden ingezet.",
+                                                            "We denken mee over de wijnkeuze, verzorgen het schenken of creëren een interactief wijnmoment voor de gasten. Zo kunnen we aansluiten bij bestaande catering of samen een passend programma rondom wijn samenstellen.",
+                                                            "Van een goed glas bij het diner tot een complete wijnbeleving."
+                                            ]
+                              },
+                              {
+                                            "title": "Wijnadvies voor horeca",
+                                            "text": [
+                                                            "Een goede wijnkaart hoeft niet de grootste kaart te zijn.",
+                                                            "Hij moet passen bij je zaak, je gerechten, je gasten én natuurlijk bij wat je wilt verkopen.",
+                                                            "De Wijnlijn helpt horecabedrijven bij het samenstellen of verbeteren van hun wijnassortiment en wijnkaart. Daarbij kijken we niet alleen naar smaak, maar ook naar inzetbaarheid, prijsopbouw en wat logisch is voor jouw concept.",
+                                                            "Ook kunnen we ondersteunen bij wijn-spijscombinaties en het meenemen van medewerkers in het verhaal achter de wijnen.",
+                                                            "Want een team dat begrijpt wat het schenkt, verkoopt wijn een stuk makkelijker."
+                                            ]
+                              }
+                  ],
+                  "closing": "Praktisch advies, begrijpelijke wijn en een assortiment dat bij jouw zaak past."
+        },
+        "over": {
+                  "eyebrow": "Over mij",
+                  "heading": "Een liefde voor wijn",
+                  "photo": "images/pety-rood.jpg",
+                  "paragraphs": [
+                              "Een liefde voor wijn, nieuwsgierigheid naar het verhaal achter de fles en vooral veel plezier in het delen daarvan. Dat is waar De Wijnlijn uit is ontstaan.",
+                              "Pety is 34 jaar, moeder van twee kinderen en sinds 2021 werkzaam als accountmanager wijn. In die rol adviseert ze horecarelaties over hun wijnassortiment en wijnkaart. Daarbij staat één gedachte centraal: wijn hoeft helemaal niet ingewikkeld te zijn om interessant te zijn.",
+                              "Een goede wijnkaart heeft voor haar de juiste balans tussen spanning, toegankelijkheid en vertrouwdheid. Genoeg herkenning om gasten op hun gemak te stellen, maar ook ruimte om ze eens iets nieuws te laten ontdekken. En minstens zo belangrijk: een kaart die begrijpelijk is voor de ondernemer én het personeel dat ermee werkt.",
+                              "In 2024 rondde Pety de Vinologenopleiding af. Daarnaast brachten verschillende wijnreizen haar de afgelopen jaren naar wijngebieden over de hele wereld. Van wijnmakers ontmoeten tot tussen de wijngaarden staan: juist die ervaringen laten zien hoeveel keuzes, tradities en verhalen er achter een glas wijn schuilgaan.",
+                              "Zelf wordt ze vooral enthousiast van Champagne, Riesling, Nebbiolo en Pinot Noir. Maar het leukste blijft om anderen te helpen ontdekken waar hún voorkeur ligt.",
+                              "Met De Wijnlijn wil Pety wijnkennis daarom op een andere manier delen. Niet belerend, niet stoffig en zonder moeilijke termen alleen omdat het kan. Wel met enthousiasme, goede wijnen en uitleg waar je daadwerkelijk iets aan hebt."
+                  ],
+                  "credentials": ["34 jaar", "Moeder van twee kinderen", "Accountmanager wijn sinds 2021", "Vinologenopleiding, afgerond in 2024"],
+                  "photo2": "images/pety-wit.jpg"
+        },
+        "contact": {
+                  "eyebrow": "Contact",
+                  "heading": "Stel je vraag",
+                  "intro": "Vertel kort wat je zoekt: een proeverij, opleiding of zakelijk advies. Je krijgt binnen twee werkdagen reactie."
+        },
+        "testimonials": []
 }

@@ -1,27 +1,27 @@
 :root{
-          --lavender:#A99BC7;
-          --lavender-deep:#8B7AB0;
-          --sage:#9FC29A;
-          --sage-deep:#7FAE79;
-          --peach:#F0A98C;
-          --peach-deep:#E8956F;
-          --gold:#C9A24D;
-          --cream:#F7F5F0;
-          --cream-deep:#EFEBE2;
-          --ink:#4E4560;
-          --ink-soft:#7A7188;
-          --white:#FFFFFF;
-          --font-display:'Text Me One', sans-serif;
-          --max-w:1120px;
+            --lavender:#A99BC7;
+            --lavender-deep:#8B7AB0;
+            --sage:#9FC29A;
+            --sage-deep:#7FAE79;
+            --peach:#F0A98C;
+            --peach-deep:#E8956F;
+            --gold:#C9A24D;
+            --cream:#F7F5F0;
+            --cream-deep:#EFEBE2;
+            --ink:#4E4560;
+            --ink-soft:#7A7188;
+            --white:#FFFFFF;
+            --font-display:'Text Me One', sans-serif;
+            --max-w:1120px;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion: reduce){
-          html{scroll-behavior:auto;}
-          *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+            html{scroll-behavior:auto;}
+            *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
 }
 body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--font-display); font-size:19px; line-height:1.7; -webkit-font-smoothing:antialiased; -webkit-text-stroke:.3px currentColor; position:relative; overflow-x:hidden;}
-body::before{content:""; position:fixed; top:0; left:-70px; width:420px; height:100vh; background-image:url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 200 220%27><path d=%27M20 150 C 40 110, 90 130, 100 105 C 110 80, 60 70, 55 40 C 100 55, 150 45, 165 15%27 fill=%27none%27 stroke=%27%238B7AB0%27 stroke-width=%2722%27 stroke-linecap=%27round%27/></svg>"); background-repeat:repeat-y; background-size:420px 420px; opacity:.05; z-index:0; pointer-events:none;}
+body::before{content:""; position:fixed; top:50%; left:20px; transform:translateY(-50%); width:260px; height:239px; background-image:url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 200 220%27><path d=%27M20 150 C 40 110, 90 130, 100 105 C 110 80, 60 70, 55 40 C 100 55, 150 45, 165 15%27 fill=%27none%27 stroke=%27%239FC29A%27 stroke-width=%2722%27 stroke-linecap=%27round%27/><path d=%27M75 15 C 75 45, 70 60, 100 60 C 130 60, 125 45, 125 15 Z%27 fill=%27%23F7F5F0%27 stroke=%27%23A99BC7%27 stroke-width=%276%27/><path d=%27M100 60 L100 95%27 stroke=%27%23A99BC7%27 stroke-width=%276%27 stroke-linecap=%27round%27/><path d=%27M78 105 C 78 95, 122 95, 122 105 C 122 112, 78 112, 78 105 Z%27 fill=%27%23A99BC7%27/></svg>"); background-repeat:no-repeat; background-size:contain; opacity:.1; z-index:0; pointer-events:none;}
 header, section, footer{position:relative; z-index:1;}
 h1,h2,h3{font-family:var(--font-display); color:var(--ink); margin:0 0 .4em; font-weight:400; line-height:1.15;}
 a{color:inherit;} img{max-width:100%; display:block;}
@@ -42,9 +42,9 @@ nav.links a{text-decoration:none; color:var(--ink); padding:6px 4px; border-bott
 nav.links a:hover, nav.links a.active{color:var(--lavender-deep); border-color:var(--peach);}
 .menu-btn{display:none; background:none; border:none; font-size:1.6rem; color:var(--lavender-deep); cursor:pointer;}
 @media (max-width:820px){
-          nav.links{display:none; position:absolute; top:100%; left:0; right:0; background:var(--cream); flex-direction:column; align-items:flex-start; padding:12px 28px 20px; border-bottom:2px solid var(--cream-deep); gap:14px;}
-          nav.links.open{display:flex;}
-          .menu-btn{display:block;}
+            nav.links{display:none; position:absolute; top:100%; left:0; right:0; background:var(--cream); flex-direction:column; align-items:flex-start; padding:12px 28px 20px; border-bottom:2px solid var(--cream-deep); gap:14px;}
+            nav.links.open{display:flex;}
+            .menu-btn{display:block;}
 }
 
 .hero{padding:64px 0 40px; text-align:center;}

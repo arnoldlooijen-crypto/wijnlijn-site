@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearEl) yearEl.textContent = new Date().getFullYear();
     const btn = document.querySelector('.menu-btn');
     const nav = document.querySelector('nav.links');
-    if (btn && nav) { btn.addEventListener('click', () => nav.classList.toggle('open')); }
+    if (btn && nav) {
+          btn.addEventListener('click', () => {
+                  const open = nav.classList.toggle('open');
+                  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+    }
     initPage();
 });
 function el(tag, cls, html) {
@@ -84,7 +89,7 @@ function renderProeverijen(data) {
           block.appendChild(el('h3', null, s.title || ''));
           (s.text || []).forEach(p => block.appendChild(el('p', null, p)));
           if (s.fact) block.appendChild(el('p', 'fact', s.fact));
-          if (s.closing) { const c = el('p', null, s.closing); c.style.fontStyle = 'italic'; c.style.color = 'var(--lavender-deep)'; block.appendChild(c); }
+          if (s.closing) block.appendChild(el('p', 'closing', s.closing));
           wrap.appendChild(block);
     });
 }
@@ -132,7 +137,7 @@ function renderZakelijk(data) {
     document.getElementById('zk-eyebrow').textContent = d.eyebrow || '';
     document.getElementById('zk-heading').textContent = d.heading || '';
     const introWrap = document.getElementById('zk-intro');
-    (d.intro || []).forEach(p => { const e2 = el('p', null, p); e2.style.color = '#EFEAF6'; introWrap.appendChild(e2); });
+    (d.intro || []).forEach(p => introWrap.appendChild(el('p', null, p)));
     const wrap = document.getElementById('zk-sections');
     (d.sections || []).forEach(s => {
           const block = el('div', 'card reveal');
@@ -149,8 +154,8 @@ function renderOver(data) {
     applyTitle(data, d.heading || 'Over mij');
     document.getElementById('over-eyebrow').textContent = d.eyebrow || '';
     document.getElementById('over-heading').textContent = d.heading || '';
-    document.getElementById('over-photo').src = d.photo || '';
-    document.getElementById('over-photo2').src = d.photo2 || '';
+    if (d.photo) document.getElementById('over-photo').src = d.photo;
+    if (d.photo2) document.getElementById('over-photo2').src = d.photo2;
     const pWrap = document.getElementById('over-paragraphs');
     (d.paragraphs || []).forEach(p => pWrap.appendChild(el('p', null, p)));
     const credWrap = document.getElementById('over-credentials');

@@ -1,95 +1,98 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Wijnlijn - Contact</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Wijnlijn - Contact</title>
+  <meta name="description" content="De Wijnlijn in Barneveld: wijnproeverijen, SDEN-wijnopleidingen en wijnadvies. De route naar het perfecte glas wijn.">
+  <meta name="theme-color" content="#172234">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="De Wijnlijn">
+  <meta property="og:title" content="De Wijnlijn - Contact">
+  <meta property="og:description" content="De route naar het perfecte glas wijn">
+  <meta property="og:image" content="https://dewijnlijn.nl/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="preload" href="fonts/poppins-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
 <body data-page="contact">
 
-<header>
-    <div class="header-row">
-          <a href="index.html" class="logo-link">
-                  <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 150 C 40 110, 90 130, 100 105 C 110 80, 60 70, 55 40 C 100 55, 150 45, 165 15" fill="none" stroke="#9FC29A" stroke-width="22" stroke-linecap="round"/>
-                      <path d="M20 150 C 40 110, 90 130, 100 105 C 110 80, 60 70, 55 40 C 100 55, 150 45, 165 15" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity=".55"/>
-                      <path d="M75 15 C 75 45, 70 60, 100 60 C 130 60, 125 45, 125 15 Z" fill="#FFFFFF" stroke="#A99BC7" stroke-width="6"/>
-                      <path d="M76 40 C 82 52, 118 52, 124 40 L 124 44 C 118 56, 82 56, 76 44 Z" fill="#C9A24D"/>
-                      <path d="M76.5 41 C 82 53, 118 53, 123.5 41 C 118 50, 82 50, 76.5 41 Z" fill="#F0A98C"/>
-                      <circle cx="107" cy="28" r="3" fill="#F0A98C"/>
-                      <circle cx="112" cy="20" r="2.2" fill="#F0A98C"/>
-                      <circle cx="97" cy="34" r="2.6" fill="#F0A98C"/>
-                      <path d="M100 60 L100 95" stroke="#A99BC7" stroke-width="6" stroke-linecap="round"/>
-                      <path d="M78 105 C 78 95, 122 95, 122 105 C 122 112, 78 112, 78 105 Z" fill="#A99BC7"/>
-                  </svg>
-                  <span class="logo-text"><span class="name">De Wijnlijn</span><span class="tag">de route naar het perfecte glas wijn</span></span>
-          </a>
-          <button class="menu-btn" aria-label="Menu">&#9776;</button>
-          <nav class="links">
-                  <a href="proeverijen.html">Proeverijen</a>
-                  <a href="training.html">Wijnopleidingen</a>
-                  <a href="wijn-spijs.html">Zakelijk</a>
-                  <a href="over-mij.html">Over mij</a>
-                  <a href="contact.html" class="active">Contact</a>
-          </nav>
-    </div>
+<header class="dark">
+  <div class="header-row">
+    <a href="index.html" class="brand" aria-label="De Wijnlijn, naar de homepage"><span class="de">DE</span><span class="name">WIJNLIJN</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+    <nav class="links" id="site-nav">
+      <a href="proeverijen.html">Proeverijen</a>
+      <a href="training.html">Wijnopleidingen</a>
+      <a href="wijn-spijs.html">Zakelijk</a>
+      <a href="over-mij.html">Over mij</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+    </nav>
+  </div>
 </header>
 
-  <section>
-      <div class="container">
-            <div class="section-head reveal">
-                    <span class="eyebrow" id="ct-eyebrow"></span>
-                    <h1 id="ct-heading"></h1>
-                    <p id="ct-intro"></p>
-            </div>
-            <div class="contact-wrap reveal">
-                    <form id="wijnlijn-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                              <input type="hidden" name="form-name" value="contact">
-                              <p style="display:none;"><label>Niet invullen: <input name="bot-field"></label></p>
-                            <div class="form-two">
-                                      <div class="form-row"><label for="naam">Naam</label><input type="text" id="naam" name="naam" required></div>
-                                      <div class="form-row"><label for="email">E-mailadres</label><input type="email" id="email" name="email" required></div>
-                            </div>
-                            <div class="form-two">
-                                      <div class="form-row"><label for="telefoon">Telefoon (optioneel)</label><input type="tel" id="telefoon" name="telefoon"></div>
-                                      <div class="form-row">
-                                                  <label for="onderwerp">Waar gaat het om?</label>
-                                                  <select id="onderwerp" name="onderwerp">
-                                                                <option>Proeverij</option>
-                                                                <option>Wijnopleiding</option>
-                                                                <option>Zakelijk</option>
-                                                                <option>Anders</option>
-                                                  </select>
-                                      </div>
-                            </div>
-                            <div class="form-row"><label for="bericht">Je bericht</label><textarea id="bericht" name="bericht" required></textarea></div>
-                            <button type="submit" class="btn btn-fill">Versturen</button>
-                            <p class="form-note">Je krijgt binnen twee werkdagen reactie.</p>
-                    </form>
-                  <div class="form-success" id="form-success">Bedankt! Je bericht is verstuurd.</div>
-            </div>
-          <p class="contact-alt">Liever direct mailen? <a href="mailto:info@dewijnlijn.nl">info@dewijnlijn.nl</a></p>
-      </div>
-  </section>
+<section class="page-head dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" id="ct-eyebrow"></span>
+      <h1 id="ct-heading">Contact</h1>
+      <div class="ornament" aria-hidden="true"><span></span></div>
+      <p id="ct-intro"></p>
+    </div>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+    <div class="contact-wrap overlap reveal">
+      <form id="wijnlijn-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><label>Niet invullen: <input name="bot-field"></label></p>
+        <div class="form-two">
+          <div class="form-row"><label for="naam">Naam</label><input type="text" id="naam" name="naam" autocomplete="name" required></div>
+          <div class="form-row"><label for="email">E-mailadres</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-two">
+          <div class="form-row"><label for="telefoon">Telefoon (optioneel)</label><input type="tel" id="telefoon" name="telefoon" autocomplete="tel"></div>
+          <div class="form-row">
+            <label for="onderwerp">Waar gaat het om?</label>
+            <select id="onderwerp" name="onderwerp">
+              <option>Proeverij</option>
+              <option>Wijnopleiding</option>
+              <option>Zakelijk</option>
+              <option>Anders</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row"><label for="bericht">Je bericht</label><textarea id="bericht" name="bericht" required></textarea></div>
+        <button type="submit" class="btn btn-fill">Versturen</button>
+        <p class="form-note">Je krijgt binnen twee werkdagen reactie.</p>
+      </form>
+      <div class="form-success" id="form-success">Bedankt! Je bericht is verstuurd.</div>
+    </div>
+    <p class="contact-alt">Liever direct mailen? <a href="mailto:info@dewijnlijn.nl">info@dewijnlijn.nl</a></p>
+  </div>
+</section>
 
 <footer>
-    <div class="container">
-          <div class="foot-links">
-                  <a href="proeverijen.html">Proeverijen</a>
-                  <a href="training.html">Wijnopleidingen</a>
-                  <a href="wijn-spijs.html">Zakelijk</a>
-                  <a href="over-mij.html">Over mij</a>
-                  <a href="contact.html">Contact</a>
-          </div>
-          &copy; <span id="year"></span> De Wijnlijn
+  <div class="container">
+    <picture><source srcset="images/logo-de-wijnlijn.webp" type="image/webp"><img src="images/logo-de-wijnlijn.png" alt="" width="451" height="512" class="footer-logo" loading="lazy"></picture>
+    <div class="foot-links">
+      <a href="proeverijen.html">Proeverijen</a>
+      <a href="training.html">Wijnopleidingen</a>
+      <a href="wijn-spijs.html">Zakelijk</a>
+      <a href="over-mij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
     </div>
+    &copy; <span id="year"></span> De Wijnlijn
+  </div>
 </footer>
 
-  <script src="site.js"></script>
-
+<script src="site.js"></script>
 </body>
 </html>

@@ -59,6 +59,13 @@ DNS-wijzigingen kunnen enkele uren tot een dag nodig hebben om overal actief te 
 
 Let op: het invulformulier is niet met een wachtwoord beveiligd. Iedereen met de directe link kan hem openen en een JSON-bestand downloaden — maar dat overschrijft niets automatisch op de live site, want alleen jij past via GitHub de echte `content.json` aan. Voor puur familiegebruik is dat prima; deel de link verder niet breed.
 
-## Foto's (volgende fase)
+## Huisstijl (definitief, oktober 2026)
 
-Er zitten nog geen foto's in de site. Zodra die er zijn: zet ze in een map `/images` in dezelfde repository, en dan koppelen we ze in `index.html` aan de juiste plekken (portret, sfeerfoto's, etc. — zie de eerdere vragenlijst).
+- **Kleuren:** navy `#172234`, goud `#D4B676`, crème `#F3EAD8` (tekst op navy), papier `#F8F3E9` (lichte vlakken). Goud voor tekst op licht: `#7D5F27`.
+- **Lettertypes:** Poppins (koppen, menu, knoppen) en EB Garamond (lopende tekst, tagline). Staan lokaal in `/fonts`, dus geen verbinding met Google nodig.
+- **Logo:** `images/logo-de-wijnlijn.png` (+ `.webp`), goud op transparant, alleen bedoeld voor donkere achtergrond. Gemaakt uit de definitieve logobestanden.
+- **Iconen en delen:** `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`; `images/og-image.jpg` is het plaatje dat verschijnt als iemand een link deelt (WhatsApp, LinkedIn e.d.).
+
+## Foto's
+
+Staan in `/images` (pety-rood, pety-wit, druiven-1, druiven-2, wijnboek). Nieuwe foto's daar neerzetten en in de HTML of `content.json` naar het bestand verwijzen.

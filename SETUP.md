@@ -35,19 +35,18 @@ Omdat stijl (`styles.css`) en logica (`site.js`) nu gedeeld zijn, kun je straks 
 
 ## Stap 3 — Domeinen koppelen
 
+Domeinen van De Wijnlijn: **dewijnlijn.nl** (primair), **dewijnlijn.com** en **wijnlijn.com**. Alle drie geregistreerd via VDX, nameservers bij Netlify DNS (`dns1` t/m `dns4.p04.nsone.net`).
+
+**wijnlijn.nl is NIET van De Wijnlijn.** Geregistreerd sinds 1999 bij EuroDNS door een andere partij; wijst naar een server van Team Internet AG (domeinparkeerder). Niet toevoegen in Netlify.
+
 In Netlify, bij de site → **Domain management**:
 
-1. Voeg **dewijnlijn.nl** toe en stel die in als **primary domain**.
-2. Voeg **wijnlijn.com** en **wijnlijn.nl** toe als extra domeinen op dezelfde site.
-3. Netlify stuurt bezoekers van de twee extra domeinen automatisch door (301-redirect) naar dewijnlijn.nl — daar hoef je verder niets voor in te stellen.
+1. **dewijnlijn.nl** is het primary domain.
+2. Voeg **dewijnlijn.com** en **wijnlijn.com** toe als domain alias (knop staat onderaan; max. ±3 wijzigingen per uur).
+3. Zet per alias **Netlify DNS** aan (Options → Set up Netlify DNS). Netlify toont dan nameservers: moeten `dns1` t/m `dns4.p04.nsone.net` zijn, anders via helpdesk@vdx.nl laten aanpassen.
+4. Netlify stuurt aliassen automatisch door (301) naar dewijnlijn.nl en regelt het HTTPS-certificaat.
 
-Daarna moet de DNS van elk domein naar Netlify wijzen:
-
-- **Makkelijkste manier:** bij elk domein de nameservers wijzigen naar de nameservers die Netlify je geeft (Netlify beheert dan de DNS). Dit doe je bij de partij waar het domein op dit moment geregistreerd staat.
-- **wijnlijn.com** én **dewijnlijn.nl** staan allebei bevestigd bij **VDX**, onder dezelfde handle (VH2023CIDYD), beide op het "Parkeren"-pakket met automatische verlenging op 09-09-2026. Log in op `mijn.vdx.nl` en wijzig voor beide domeinen de nameservers, of vervang de DNS-records door wat Netlify aangeeft. Dit kan in één sessie voor beide domeinen tegelijk.
-- **wijnlijn.nl** (zonder "de") — nog niet bevestigd of die ook bij VDX zit. Bij een eerdere DNS-check wees dit domein naar een ander IP-adres dan de andere twee, dus zeker weten doe ik het niet. Check dit even in het VDX-portaal: staat wijnlijn.nl er ook tussen, dan kan alles in één keer.
-
-DNS-wijzigingen kunnen enkele uren tot een dag nodig hebben om overal actief te worden.
+Status 16 okt 2026: dewijnlijn.nl en www.dewijnlijn.nl werken. dewijnlijn.com en wijnlijn.com geven een DNS-fout (SERVFAIL, "lame delegation"): de registry verwijst naar Netlify DNS, maar daar bestaat geen zone voor deze domeinen. Stap 2 en 3 hierboven lossen dat op.
 
 ## Stap 4 — Hoe teksten aanpassen straks werkt
 

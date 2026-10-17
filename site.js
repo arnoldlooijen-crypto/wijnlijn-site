@@ -44,6 +44,7 @@ function initReveal() {
 function initPage() {
     loadSiteData().then(data => {
           if (!data) return;
+          applyContact(data);
           const page = document.body.getAttribute('data-page');
           if (page === 'home') renderHome(data);
           else if (page === 'proeverijen') renderProeverijen(data);
@@ -168,15 +169,31 @@ function renderContact(data) {
     document.getElementById('ct-eyebrow').textContent = d.eyebrow || '';
     document.getElementById('ct-heading').textContent = d.heading || '';
     document.getElementById('ct-intro').textContent = d.intro || '';
-    document.querySelectorAll('a[href^="mailto:"]').forEach(a => { a.href = 'mailto:' + (data.meta.email || 'info@dewijnlijn.nl'); a.textContent = data.meta.email || 'info@dewijnlijn.nl'; });
-    const form = document.getElementById('wijnlijn-form');
-    if (form) {
-          form.addEventListener('submit', (e) => {
-                  e.preventDefault();
-                  const fd = new FormData(form);
-                  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() })
-                    .then(() => { form.style.display = 'none'; document.getElementById('form-success').style.display = 'block'; })
-                    .catch(() => { form.style.display = 'none'; document.getElementById('form-success').style.display = 'block'; });
-          });
+}
+
+// Mail, telefoon en Instagram komen uit content.json (meta).
+// Telefoon blijft verborgen zolang er nog een placeholder (XX) staat.
+function telHref(phone) {
+    let digits = phone.replace(/[^\d+]/g, '');
+    if (digits.startsWith('00')) digits = '+' + digits.slice(2);
+    else if (digits.startsWith('0')) digits = '+31' + digits.slice(1);
+    return 'tel:' + digits;
+}
+function applyContact(data) {
+    const m = data.meta || {};
+    const email = (m.email || '').trim();
+    if (email) {
+          document.querySelectorAll('[data-contact="email-link"]').forEach(a => { a.href = 'mailto:' + email; });
+          document.querySelectorAll('[data-contact="email"]').forEach(n => { n.textContent = email; });
+    }
+    const phone = (m.phone || '').trim();
+    const phoneOk = phone && !/x/i.test(phone) && phone.replace(/\D/g, '').length >= 10;
+    document.querySelectorAll('[data-contact="phone-link"]').forEach(a => {
+          if (phoneOk) { a.href = telHref(phone); a.hidden = false; } else { a.hidden = true; }
+    });
+    if (phoneOk) document.querySelectorAll('[data-contact="phone"]').forEach(n => { n.textContent = phone; });
+    const ig = (m.instagram || '').trim();
+    if (/^https:\/\/(www\.)?instagram\.com\//.test(ig)) {
+          document.querySelectorAll('[data-contact="instagram-link"]').forEach(a => { a.href = ig; });
     }
 }

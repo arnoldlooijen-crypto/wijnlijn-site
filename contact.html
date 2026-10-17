@@ -50,32 +50,21 @@
 <section class="page-body">
   <div class="container">
     <div class="contact-wrap overlap reveal">
-      <form id="wijnlijn-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p style="display:none;"><label>Niet invullen: <input name="bot-field"></label></p>
-        <div class="form-two">
-          <div class="form-row"><label for="naam">Naam</label><input type="text" id="naam" name="naam" autocomplete="name" required></div>
-          <div class="form-row"><label for="email">E-mailadres</label><input type="email" id="email" name="email" autocomplete="email" required></div>
-        </div>
-        <div class="form-two">
-          <div class="form-row"><label for="telefoon">Telefoon (optioneel)</label><input type="tel" id="telefoon" name="telefoon" autocomplete="tel"></div>
-          <div class="form-row">
-            <label for="onderwerp">Waar gaat het om?</label>
-            <select id="onderwerp" name="onderwerp">
-              <option>Proeverij</option>
-              <option>Wijnopleiding</option>
-              <option>Zakelijk</option>
-              <option>Anders</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row"><label for="bericht">Je bericht</label><textarea id="bericht" name="bericht" required></textarea></div>
-        <button type="submit" class="btn btn-fill">Versturen</button>
-        <p class="form-note">Je krijgt binnen twee werkdagen reactie.</p>
-      </form>
-      <div class="form-success" id="form-success">Bedankt! Je bericht is verstuurd.</div>
+      <div class="contact-options">
+        <a class="contact-option" href="mailto:info@dewijnlijn.nl" data-contact="email-link">
+          <span class="label">Mail</span>
+          <span class="value" data-contact="email">info@dewijnlijn.nl</span>
+        </a>
+        <a class="contact-option" href="#" data-contact="phone-link" hidden>
+          <span class="label">Bel</span>
+          <span class="value" data-contact="phone"></span>
+        </a>
+        <a class="contact-option" href="https://www.instagram.com/de.wijnlijn/" data-contact="instagram-link" target="_blank" rel="noopener">
+          <span class="label">Instagram</span>
+          <span class="value">@de.wijnlijn</span>
+        </a>
+      </div>
     </div>
-    <p class="contact-alt">Liever direct mailen? <a href="mailto:info@dewijnlijn.nl">info@dewijnlijn.nl</a></p>
   </div>
 </section>
 
@@ -88,6 +77,11 @@
       <a href="wijn-spijs.html">Zakelijk</a>
       <a href="over-mij.html">Over mij</a>
       <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-contact">
+      <a href="mailto:info@dewijnlijn.nl" data-contact="email-link"><span data-contact="email">info@dewijnlijn.nl</span></a>
+      <a href="#" data-contact="phone-link" hidden><span data-contact="phone"></span></a>
+      <a href="https://www.instagram.com/de.wijnlijn/" data-contact="instagram-link" target="_blank" rel="noopener">Instagram @de.wijnlijn</a>
     </div>
     &copy; <span id="year"></span> De Wijnlijn
   </div>

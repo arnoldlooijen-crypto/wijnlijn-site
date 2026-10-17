@@ -3,7 +3,8 @@
                   "businessName": "De Wijnlijn",
                   "tagline": "De route naar het perfecte glas wijn",
                   "email": "info@dewijnlijn.nl",
-                  "phone": "06 - XX XX XX XX"
+                  "phone": "06 - XX XX XX XX",
+                  "instagram": "https://www.instagram.com/de.wijnlijn/"
         },
         "home": {
                   "tagline": "De route naar het perfecte glas wijn.",
@@ -129,7 +130,7 @@
                                                             "SDEN 3 is interessant voor fanatieke wijnliefhebbers, maar ook voor professionals die wijnkennis in hun werk willen gebruiken."
                                             ],
                                             "duration": "8 avonden",
-                                            "dates": "18 maart, 1, 8, 15, 22 & 29 april, 4 & 13 mei 2027",
+                                            "dates": "18 maart, 1, 8, 15, 22 & 29 april, 13 & 27 mei 2027",
                                             "price": "€435 per persoon",
                                             "priceNote": "Exclusief lesboek t.w.v. €49,50",
                                             "audience": "Voor wie al een goede basis heeft en zich verder wil verdiepen in de wereld van wijn."
@@ -203,7 +204,7 @@
         "contact": {
                   "eyebrow": "Contact",
                   "heading": "Stel je vraag",
-                  "intro": "Vertel kort wat je zoekt: een proeverij, opleiding of zakelijk advies. Je krijgt binnen twee werkdagen reactie."
+                  "intro": "Mail of bel gerust over een proeverij, opleiding of zakelijk advies. Je krijgt binnen twee werkdagen reactie."
         },
         "testimonials": []
 }

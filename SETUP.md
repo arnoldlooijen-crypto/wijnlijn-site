@@ -6,7 +6,7 @@ De site bestaat nu uit **losse pagina's** in plaats van één lange scrollpagina
 
 - `index.html` — homepage (hero + korte teaser naar de drie onderdelen)
 - `proeverijen.html` — de drie proeverij-varianten
-- `training.html` — wijntraining
+- `training.html` — opleidingen
 - `wijn-spijs.html` — wijn & spijs
 - `over-mij.html` — persoonlijk verhaal + reacties van gasten
 - `contact.html` — contactgegevens

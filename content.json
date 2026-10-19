@@ -1,13 +1,13 @@
 {
         "meta": {
                   "businessName": "De Wijnlijn",
-                  "tagline": "Proeverijen · Opleidingen · Zakelijk advies",
+                  "tagline": "De route naar het perfecte glas wijn",
                   "email": "info@dewijnlijn.nl",
                   "phone": "06 - XX XX XX XX",
                   "instagram": "https://www.instagram.com/de.wijnlijn/"
         },
         "home": {
-                  "tagline": "Proeverijen · Opleidingen · Zakelijk advies",
+                  "tagline": "De route naar het perfecte glas wijn.",
                   "lead": [
                               "De wijnwereld is een complexe wereld. Bij De Wijnlijn draait het om ontdekken, proeven en begrijpen, op een manier die toegankelijk, speels en vooral leuk blijft.",
                               "Of je nu meer wilt leren over wijn, samen een proeverij wilt beleven of professioneel advies zoekt voor jouw horecazaak: De Wijnlijn helpt je graag verder.",
@@ -24,11 +24,11 @@
                               },
                               {
                                             "title": "Opleidingen",
-                                            "text": "Van eerste kennismaking tot serieuze verdieping: de SDEN-cursussen van De Wijnlijn.",
+                                            "text": "Van eerste kennismaking tot serieuze verdieping: de SDEN-opleidingen van De Wijnlijn.",
                                             "link": "training.html"
                               },
                               {
-                                            "title": "Zakelijk",
+                                            "title": "Zakelijk advies",
                                             "text": "Bedrijfsproeverijen, events en wijnadvies voor horeca. Wijn die werkt voor jouw bedrijf.",
                                             "link": "wijn-spijs.html"
                               }
@@ -80,7 +80,7 @@
                   "heading": "Meer weten over wijn? Begin gewoon met proeven.",
                   "intro": [
                               "Wijn kan je zo ingewikkeld maken als je zelf wilt. Bij De Wijnlijn doen we dat liever niet.",
-                              "Tijdens onze SDEN-cursussen leer je stap voor stap begrijpen wat er in je glas gebeurt. Natuurlijk hoort daar theorie bij, maar wijn leer je uiteindelijk vooral door veel te ruiken, te vergelijken en te proeven.",
+                              "Tijdens onze SDEN-opleidingen leer je stap voor stap begrijpen wat er in je glas gebeurt. Natuurlijk hoort daar theorie bij, maar wijn leer je uiteindelijk vooral door veel te ruiken, te vergelijken en te proeven.",
                               "De opleidingen zijn geschikt voor enthousiaste wijnliefhebbers én voor mensen die beroepsmatig met wijn werken. Je hoeft dus echt geen wijnkenner te zijn om te beginnen.",
                               "Welke route je kiest, bepaal je zelf."
                   ],
@@ -93,7 +93,7 @@
                                                             "Vind je wijn leuk, maar heb je eigenlijk geen idee waarom je de ene wijn wel lekker vindt en de andere niet? Dan is SDEN 1 een mooie plek om te beginnen.",
                                                             "Tijdens twee avonden maak je op een toegankelijke manier kennis met wijn. We kijken naar hoe wijn wordt gemaakt, bekende druivenrassen, smaken en aroma's en natuurlijk naar hoe je een wijn eigenlijk proeft.",
                                                             "Je leert niet om moeilijke proefnotities uit je hoofd te kennen, maar juist om beter te herkennen wat jij ruikt en proeft.",
-                                                            "Na deze cursus kijk je gegarandeerd anders naar het wijnschap."
+                                                            "Na deze opleiding kijk je gegarandeerd anders naar het wijnschap."
                                             ],
                                             "duration": "2 avonden",
 
@@ -154,7 +154,7 @@
                   ]
         },
         "zakelijk": {
-                  "eyebrow": "Zakelijk",
+                  "eyebrow": "Zakelijk advies",
                   "heading": "Wijn die werkt voor jouw bedrijf",
                   "intro": [
                               "Wijn kan iets toevoegen aan een borrel, diner of evenement. Maar dan moet het wel passen bij het moment, het gerecht én de gasten.",

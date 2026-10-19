@@ -135,7 +135,7 @@ function renderOpleidingen(data) {
 
 function renderZakelijk(data) {
     const d = data.zakelijk;
-    applyTitle(data, d.heading || 'Zakelijk');
+    applyTitle(data, d.heading || 'Zakelijk advies');
     document.getElementById('zk-eyebrow').textContent = d.eyebrow || '';
     document.getElementById('zk-heading').textContent = d.heading || '';
     const introWrap = document.getElementById('zk-intro');

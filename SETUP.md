@@ -67,4 +67,4 @@ Let op: het invulformulier is niet met een wachtwoord beveiligd. Iedereen met de
 
 ## Foto's
 
-Staan in `/images` (pety-rood, pety-wit, druiven-1, druiven-2, wijnboek). Nieuwe foto's daar neerzetten en in de HTML of `content.json` naar het bestand verwijzen.
+Staan in `/images` (pety-rood, pety-wit, druiven-1, druiven-2, wijnflessen). Nieuwe foto's daar neerzetten en in de HTML of `content.json` naar het bestand verwijzen.

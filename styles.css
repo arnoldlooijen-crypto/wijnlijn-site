@@ -14,6 +14,7 @@
   --navy-soft:#1E2B40;
   --gold:#D4B676;
   --gold-soft:#E4CF9F;
+  --logo-accent:#E7B92F;      /* goud van de dienstenregel in het officiële logo */
   --gold-ink:#7D5F27;          /* goud voor tekst op licht (contrast 5,4:1) */
   --cream:#F3EAD8;             /* tekst op navy */
   --cream-soft:#C8C0AE;        /* secundaire tekst op navy */
@@ -75,10 +76,11 @@ nav.links a:hover, nav.links a.active{color:var(--gold); border-color:var(--gold
 /* Home: hero in de stijl van de Instagram-aankondiging */
 .hero{padding:64px 0 72px;}
 .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
-.hero-brand{text-align:center;}
-.hero-logo{margin:0 auto; width:min(360px, 78vw);}
+.hero-brand{text-align:center; container-type:inline-size; min-width:0;}
+.hero-logo{margin:0 auto; width:min(360px, 78vw, 100%);}
 .hero-logo img{width:100%; height:auto;}
-.hero .tagline{font-family:var(--font-serif); font-style:italic; font-size:1.45rem; color:var(--cream); margin:6px 0 0;}
+.hero .services{font-family:var(--font-sans); font-weight:500; text-transform:uppercase; letter-spacing:.16em; text-indent:.16em; white-space:nowrap; color:var(--logo-accent); font-size:clamp(.5rem, 3.1cqi, .98rem); width:min(520px, 100%); margin:30px auto 0; padding-top:14px; border-top:1px solid var(--logo-accent);}
+.hero .services .sep{font-size:.62em; vertical-align:.2em; margin:0 .35em;}
 .hero-ctas{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:30px;}
 .hero-photo-wrap{display:flex; justify-content:center;}
 @media (max-width:860px){

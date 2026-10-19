@@ -59,7 +59,14 @@ function initPage() {
 function renderHome(data) {
     applyTitle(data, data.meta.tagline || '');
     const h = data.home;
-    document.getElementById('home-tagline').textContent = h.tagline || '';
+    const sv = document.getElementById('home-services');
+    if (sv && Array.isArray(h.services) && h.services.length) {
+          sv.textContent = '';
+          h.services.forEach((s, i) => {
+                  if (i) { sv.appendChild(document.createTextNode(' ')); const sep = el('span', 'sep', '&#9670;'); sep.setAttribute('aria-hidden', 'true'); sv.appendChild(sep); sv.appendChild(document.createTextNode(' ')); }
+                  sv.appendChild(document.createTextNode(s));
+          });
+    }
     const leadWrap = document.getElementById('home-lead');
     (h.lead || []).forEach(p => leadWrap.appendChild(el('p', 'lead reveal', p)));
     document.getElementById('home-cta1').textContent = h.cta1 || '';

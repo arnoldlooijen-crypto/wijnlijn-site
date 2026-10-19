@@ -62,8 +62,8 @@ Let op: het invulformulier is niet met een wachtwoord beveiligd. Iedereen met de
 
 - **Kleuren:** navy `#172234`, goud `#D4B676`, crème `#F3EAD8` (tekst op navy), papier `#F8F3E9` (lichte vlakken). Goud voor tekst op licht: `#7D5F27`.
 - **Lettertypes:** Poppins (koppen, menu, knoppen) en EB Garamond (lopende tekst, tagline). Staan lokaal in `/fonts`, dus geen verbinding met Google nodig.
-- **Logo:** `images/logo-de-wijnlijn.png` (+ `.webp`), goud op transparant, alleen bedoeld voor donkere achtergrond. Gemaakt uit de definitieve logobestanden.
-- **Iconen en delen:** `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`; `images/og-image.jpg` is het plaatje dat verschijnt als iemand een link deelt (WhatsApp, LinkedIn e.d.).
+- **Logo:** `images/logo-de-wijnlijn.svg` (embleem met naam, vector, goud #DCC690 op transparant, alleen voor donkere achtergrond). Uit het officiële logo-PDF (19 okt 2026). De dienstenregel (Proeverijen ◆ Opleidingen ◆ Zakelijk advies) staat op de homepage als echte tekst, zodat hij op mobiel leesbaar blijft; tekst in `content.json` → `home.services`.
+- **Iconen en delen:** `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`; `images/og-de-wijnlijn.jpg` (volledig officieel logo, 1200×630) is het plaatje dat verschijnt als iemand een link deelt (WhatsApp, LinkedIn e.d.).
 
 ## Foto's
 

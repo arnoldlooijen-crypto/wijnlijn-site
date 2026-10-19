@@ -7,7 +7,7 @@
                   "instagram": "https://www.instagram.com/de.wijnlijn/"
         },
         "home": {
-                  "tagline": "De route naar het perfecte glas wijn.",
+                  "services": ["Proeverijen", "Opleidingen", "Zakelijk advies"],
                   "lead": [
                               "De wijnwereld is een complexe wereld. Bij De Wijnlijn draait het om ontdekken, proeven en begrijpen, op een manier die toegankelijk, speels en vooral leuk blijft.",
                               "Of je nu meer wilt leren over wijn, samen een proeverij wilt beleven of professioneel advies zoekt voor jouw horecazaak: De Wijnlijn helpt je graag verder.",

@@ -1,13 +1,13 @@
 {
         "meta": {
                   "businessName": "De Wijnlijn",
-                  "tagline": "De route naar het perfecte glas wijn",
+                  "tagline": "Proeverijen · Opleidingen · Zakelijk advies",
                   "email": "info@dewijnlijn.nl",
                   "phone": "06 - XX XX XX XX",
                   "instagram": "https://www.instagram.com/de.wijnlijn/"
         },
         "home": {
-                  "tagline": "De route naar het perfecte glas wijn.",
+                  "tagline": "Proeverijen · Opleidingen · Zakelijk advies",
                   "lead": [
                               "De wijnwereld is een complexe wereld. Bij De Wijnlijn draait het om ontdekken, proeven en begrijpen, op een manier die toegankelijk, speels en vooral leuk blijft.",
                               "Of je nu meer wilt leren over wijn, samen een proeverij wilt beleven of professioneel advies zoekt voor jouw horecazaak: De Wijnlijn helpt je graag verder.",
@@ -23,7 +23,7 @@
                                             "link": "proeverijen.html"
                               },
                               {
-                                            "title": "Wijnopleidingen",
+                                            "title": "Opleidingen",
                                             "text": "Van eerste kennismaking tot serieuze verdieping: de SDEN-cursussen van De Wijnlijn.",
                                             "link": "training.html"
                               },
@@ -76,7 +76,7 @@
                   ]
         },
         "opleidingen": {
-                  "eyebrow": "Wijnopleidingen",
+                  "eyebrow": "Opleidingen",
                   "heading": "Meer weten over wijn? Begin gewoon met proeven.",
                   "intro": [
                               "Wijn kan je zo ingewikkeld maken als je zelf wilt. Bij De Wijnlijn doen we dat liever niet.",
@@ -96,6 +96,8 @@
                                                             "Na deze cursus kijk je gegarandeerd anders naar het wijnschap."
                                             ],
                                             "duration": "2 avonden",
+
+                                            "tasting": "6 tot 8 wijnen per avond",
                                             "dates": "13 & 20 januari 2027",
                                             "price": "€115 per persoon",
                                             "priceNote": "Exclusief lesboek t.w.v. €9",
@@ -113,6 +115,8 @@
                                                             "SDEN 2 is geschikt voor wijnliefhebbers die meer verdieping zoeken, maar ook voor mensen die in horeca, catering of wijnverkoop werken."
                                             ],
                                             "duration": "5 avonden",
+
+                                            "tasting": "6 tot 8 wijnen per avond",
                                             "dates": "2 & 16 februari, 2, 16 & 30 maart 2027",
                                             "price": "€295 per persoon",
                                             "priceNote": "Exclusief lesboek t.w.v. €44",
@@ -130,6 +134,8 @@
                                                             "SDEN 3 is interessant voor fanatieke wijnliefhebbers, maar ook voor professionals die wijnkennis in hun werk willen gebruiken."
                                             ],
                                             "duration": "8 avonden",
+
+                                            "tasting": "6 tot 8 wijnen per avond",
                                             "dates": "18 maart, 1, 8, 15, 22 & 29 april, 13 & 27 mei 2027",
                                             "price": "€435 per persoon",
                                             "priceNote": "Exclusief lesboek t.w.v. €49,50",

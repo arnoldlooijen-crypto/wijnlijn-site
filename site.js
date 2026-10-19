@@ -97,7 +97,7 @@ function renderProeverijen(data) {
 
 function renderOpleidingen(data) {
     const d = data.opleidingen;
-    applyTitle(data, d.heading || 'Wijnopleidingen');
+    applyTitle(data, d.heading || 'Opleidingen');
     document.getElementById('opl-eyebrow').textContent = d.eyebrow || '';
     document.getElementById('opl-heading').textContent = d.heading || '';
     const introWrap = document.getElementById('opl-intro');
@@ -114,6 +114,7 @@ function renderOpleidingen(data) {
           const meta = el('div', 'meta');
           const mkMeta = (label, value) => { const m = el('div'); m.appendChild(el('strong', null, label)); m.appendChild(document.createTextNode(value || '')); return m; };
           meta.appendChild(mkMeta('Duur', c.duration));
+          if (c.tasting) meta.appendChild(mkMeta('Proeven', c.tasting));
           meta.appendChild(mkMeta('Data', c.dates));
           meta.appendChild(mkMeta('Investering', (c.price || '') + (c.priceNote ? ' - ' + c.priceNote : '')));
           meta.appendChild(mkMeta('Voor wie', c.audience));
